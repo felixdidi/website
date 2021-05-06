@@ -5,7 +5,7 @@ html {
   --text: #3c3836;
   --text2: #7c6f64;
   --accent: #3c3836;
-  --accent2: #427b58;
+  --accent2: #7c6f64;
   --red: #cc241d;
   --green: #98971a;
   --yellow: #d79921;
@@ -17,7 +17,7 @@ html {
   --darkmode-icon: "\f186";
   --darkmode-icon-padding: 3px;
   --filter: none;
-  --fdfilter: none;
+  --fdfilter: brightness(110%) saturate(0%);
   scroll-behavior: smooth;
 }
 
@@ -39,7 +39,7 @@ html {
   --darkmode-icon: "\f0eb";
   --darkmode-icon-padding: 4px;
   --filter: invert(80%) sepia(50%);
-  --fdfilter: brightness(95%) saturate(0%);
+  --fdfilter: none;
 }
 
 ::-moz-selection {
@@ -204,7 +204,7 @@ h1 {
   font-family: Garbata;
   line-height: 130%;
   text-transform: uppercase;
-  font-size: 37pt;
+  font-size: 40pt;
   overflow: hidden;
   color: var(--accent);
   opacity: 0;
@@ -533,7 +533,7 @@ pre code {
   font-weight: normal;
   color: var(--text);
   background: var(--bg);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 150%;
   transition: 0.3s;
   padding: 0;
@@ -669,6 +669,7 @@ a.footnote-ref {
   border-bottom-right-radius: 25px;
   opacity: 0;
   transition: 0.3s;
+  filter: var(--fdfilter);
 }
 
 .fd.animate {
@@ -728,7 +729,7 @@ a.footnote-ref {
   opacity: 1;
   animation: none !important;
   position: fixed;
-  color: var(--accent);
+  color: var(--text2);
   animation: fadeIn 1s 1.3s normal both !important;
 }
 
@@ -766,8 +767,7 @@ div.tocify {
 }
 
 .list-group-item.active {
-  color: var(--text) !important;
-  font-weight: 500;
+  color: var(--accent) !important;
 }
 
 .list-group-item:hover, .list-group-item.active:hover {
@@ -799,13 +799,13 @@ div.tocify {
 }
 
 .navbar a {
-  font-size: 14px;
+  font-size: 13px;
   border: none !important;
   text-decoration: none !important;
 }
 
 .navbar a:hover {
-  color: var(--accent2) !important;
+  color: var(--accent) !important;
   background: transparent;
 }
 
@@ -816,11 +816,11 @@ div.tocify {
 }
 
 .navbar-nav a {
-  color: var(--text) !important;
+  color: var(--text2) !important;
 }
 
 .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:hover {
-  color: var(--accent2) !important;
+  color: var(--accent) !important;
   background: transparent;
   font-weight: normal;
 }
@@ -845,8 +845,7 @@ div.tocify {
 
 .navbar-toggle {
   border: none;
-   !important;
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .navbar-inverse {
@@ -1121,8 +1120,6 @@ label:active:after {
 
   .navbar-inverse {
     font-size: 15pt;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 }
 
@@ -1202,7 +1199,7 @@ label:active:after {
   }
 
   h1, .footnotes ol:before {
-    font-size: 25pt !important;
+    font-size: 30pt !important;
   }
 
   h2 {
