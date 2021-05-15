@@ -1,11 +1,11 @@
 /* colors ------------------------------------------------------------------- */
 html {
   --bg: #fff;
-  --bg2: #fefbec;
+  --bg2: #f7f7f7;
   --text: #3c3836;
   --text2: #7c6f64;
-  --accent: #3c3836;
-  --accent2: #7c6f64;
+  --accent: #fabd2f;
+  --accent2: #fabd2f;
   --red: #cc241d;
   --green: #98971a;
   --yellow: #d79921;
@@ -22,9 +22,9 @@ html {
 }
 
 [data-theme="dark"] {
-  --bg: #121212;
-  --bg2: #282828;
-  --text: #bdae93;
+  --bg: #1d2021;
+  --bg2: #171717;
+  --text: #d5c4a1;
   --text2: #a89984;
   --accent: #fabd2f;
   --accent2: #d79921;
@@ -45,12 +45,12 @@ html {
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--bg);
-  background: var(--accent2);
+  background: var(--accent);
 }
 
 ::selection {
   color: var(--bg);
-  background: var(--accent2);
+  background: var(--accent);
 }
 
 /* animations --------------------------------------------------------------- */
@@ -93,15 +93,19 @@ body {
   font-family: Reforma2018;
   font-feature-settings: 'ss03', 'ss04', 'ss05', 'clig', 'dlig';
   font-weight: 300;
-  padding-top: 80px !important;
+  padding-top: 70px !important;
   background: var(--bg) !important;
   color: var(--text) !important;
   transition: 0.3s;
 }
 
+strong {
+  font-weight: 500;
+}
+
 .main-container {
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: calc(6% + 320px);
+  padding-right: 6%;
   padding-bottom: 50px;
   min-height: 77vh;
 }
@@ -114,7 +118,6 @@ body {
 }
 
 img {
-  border-radius: 7px !important;
   filter: var(--filter);
 }
 
@@ -204,7 +207,7 @@ h1 {
   font-family: Garbata;
   line-height: 130%;
   text-transform: uppercase;
-  font-size: 40pt;
+  font-size: 30pt;
   overflow: hidden;
   color: var(--accent);
   opacity: 0;
@@ -221,8 +224,13 @@ h1.animate {
   margin-top: 70px !important;
   padding-top: 3px !important;
   margin-bottom: 40px !important;
-  border-top: 2px solid var(--accent2);
+  border-top: 2px solid var(--accent);
 }
+
+.section h1.animate {
+  animation: typewriter 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s 1 normal both;
+}
+
 
 .start-page-body h1 {
   animation: typewriter 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.8s 1 normal both;
@@ -277,7 +285,7 @@ h2 a {
 }
 
 .section h3.animate {
-  animation: fadeIn 1s 1s normal both;
+  animation: fadeIn 1s 1s normal both !important;
 }
 
 .subtitle {
@@ -286,6 +294,7 @@ h2 a {
   margin-top: -10px !important;
   margin-bottom: 20px !important;
   opacity: 0;
+  white-space: normal !important;
 }
 
 .subtitle.animate {
@@ -324,14 +333,14 @@ h4.animate {
   color: var(--text) !important;
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-color: var(--accent2);
+  text-decoration-color: var(--accent);
   transition: 0.3s;
 }
 
 .section a:hover, .footnotes a:hover, .toc-content a:hover {
   color: var(--text) !important;
   text-decoration-style: wavy !important;
-  text-decoration-color: var(--accent2);
+  text-decoration-color: var(--accent);
 }
 
 ol {
@@ -389,7 +398,7 @@ hr {
   margin-left: 0;
   margin-top: 40px;
   margin-bottom: 0px;
-  border-top: 2px solid var(--accent2) !important;
+  border-top: 1.5px solid var(--accent) !important;
   opacity: 0;
 }
 
@@ -399,11 +408,11 @@ hr.animate {
 }
 
 blockquote {
-  padding-left: 50px;
+  padding-left: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-style: italic;
-  border-color: var(--accent2) !important;
+  border-color: var(--accent) !important;
   opacity: 0;
 }
 
@@ -483,7 +492,7 @@ th {
   background-color: var(--bg);
   text-decoration: underline !important;
   text-underline-position: under !important;
-  text-decoration-color: var(--accent2);
+  text-decoration-color: var(--accent);
   border: none !important;
   margin-top: 20px !important;
   margin-bottom: 20px !important;
@@ -492,7 +501,7 @@ th {
 
 .btn:hover {
   text-decoration-style: wavy !important;
-  text-decoration-color: var(--accent2);
+  text-decoration-color: var(--accent);
   background-color: var(--bg);
 }
 
@@ -504,7 +513,6 @@ th {
 pre {
   background: var(--bg) !important;
   border: none !important;
-  border-radius: 10px;
   padding: 10px 10px 10px 0px;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -617,18 +625,19 @@ a.footnote-ref {
 
 .paper-info a {
   font-family: iA Writer Mono;
-  color: var(--text2) !important;
+  color: var(--bg) !important;
   text-decoration: none;
   font-size: 12px !important;
   padding: 3px 7px 3px 7px !important;
-  background: var(--bg);
-  border: 0.5px solid var(--text2);
-  border-radius: 5px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
 }
 
 .paper-info a:hover {
-  color: var(--bg) !important;
-  background: var(--text2);
+  color: var(--accent) !important;
+  background: var(--bg);
+  border: 1px solid var(--accent);
   transition: 0.3s;
 }
 
@@ -653,23 +662,20 @@ a.footnote-ref {
 /* start page --------------------------------------------------------------- */
 .fd {
   position: relative;
-  min-width: 250px;
-  max-width: 45vh;
-  height: 50vh;
-  max-height: 470px;
+  height: 370px;
+  max-width: 400px;
   margin-top: 40px;
   margin-bottom: 50px;
-  background-color: transparent;
-  background-image: url('../fd.jpg');
+  background-color: var(--bg2);
+  background-image: url('../fd.png');
   background-repeat: no-repeat;
   background-size: auto 150%;
-  background-position-x: 65%;
-  background-position-y: 20%;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  background-position-x: 50%;
+  background-position-y: 80%;
+  border-radius: 15px;
   opacity: 0;
   transition: 0.3s;
-  filter: var(--fdfilter);
+  filter: none;
 }
 
 .fd.animate {
@@ -698,38 +704,31 @@ a.footnote-ref {
 }
 
 .find-me a:hover {
-  color: var(--accent2) !important;
+  color: var(--accent) !important;
   background: none !important;
-}
-
-/* top asset ---------------------------------------------------------------- */
-.top-asset {
-  background-image: var(--top-asset);
-  background-size: auto 100%;
-  background-repeat-x: repeat;
-  height: 105px;
-  margin-top: 20px;
-  margin-bottom: -20px;
-  filter: none !important;
-  opacity: 0;
-}
-
-.top-asset.animate {
-  opacity: 1 !important;
-  animation: typewriter 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1 normal both;
 }
 
 /* TOC ---------------------------------------------------------------------- */
 #TOC {
-  padding-top: 45px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 15px !important;
+  padding-bottom: 10px;
+  padding-right: 2px !important;
   animation: fadeIn 1s 1.3s normal both;
+  left: 80%;
+  border-radius: 0;
+  max-width: 250px !important;
 }
 
 .content {
+  font-size: 17pt !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0px;
   opacity: 1;
   animation: none !important;
-  position: fixed;
-  color: var(--text2);
+  color: var(--accent);
   animation: fadeIn 1s 1.3s normal both !important;
 }
 
@@ -760,9 +759,8 @@ div.tocify {
   font-family: Garbata;
   color: var(--text2) !important;
   font-size: 12pt !important;
-  font-weight: 100;
   line-height: 1 !important;
-  width: 70%;
+  width: 90%;
   padding-bottom: 10px !important;
 }
 
@@ -816,7 +814,7 @@ div.tocify {
 }
 
 .navbar-nav a {
-  color: var(--text2) !important;
+  color: var(--text) !important;
 }
 
 .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:hover {
@@ -862,7 +860,7 @@ div.tocify {
 
 .icon-bar {
   width: 40px !important;
-  background-color: var(--text2) !important;
+  background-color: var(--text) !important;
 }
 
 .navbar-right {
@@ -870,6 +868,60 @@ div.tocify {
 }
 
 /* custom sidebar ----------------------------------------------------------- */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  background: var(--bg2);
+  width: 300px;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.sidebar h1 {
+  color: var(--accent2);
+  font-size: 52px !important;
+  animation: none;
+  display: block;
+  padding-left: 45px;
+  padding-top: 40px;
+  line-height: 1;
+  white-space: normal !important;
+  text-transform: none;
+}
+
+.sidebar a:hover {
+  text-decoration: none !important;
+}
+
+.sidebar li {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-feature-settings: normal;
+  font-weight: normal;
+  line-height: 2.5;
+  list-style-type: none;
+}
+
+.sidebar ul {
+  padding-top: 40px !important;
+  padding-left: 50px;
+}
+
+.sidebar ul a {
+  color: var(--text);
+}
+
+.sidebar .active a {
+  color: var(--accent2);
+}
+
+.sidebar ul a:hover {
+  color: var(--accent2);
+}
+
+/* info bar ----------------------------------------------------------------- */
+
 input[type=checkbox] {
   height: 0;
   width: 0;
@@ -1005,8 +1057,8 @@ label:active:after {
   font-size: 10pt;
   font-weight: normal;
   color: var(--bg);
-  background: var(--accent2);
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: 7px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-right: 30px;
@@ -1033,7 +1085,7 @@ label:active:after {
 
 .impressum:before, .made-with-r-link:before, .accessibility:before {
   border-color: rgba(40, 40, 40, 0);
-  border-left-color: var(--accent2);
+  border-left-color: var(--accent);
   border-width: 11px;
   margin-top: -11px;
   transition: 0.3s;
@@ -1047,8 +1099,8 @@ label:active:after {
   font-size: 10pt;
   font-weight: normal;
   color: var(--bg);
-  background: var(--accent2);
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: 7px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-right: 30px;
@@ -1069,8 +1121,8 @@ label:active:after {
   font-size: 10pt;
   font-weight: normal;
   color: var(--bg);
-  background: var(--accent2);
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: 7px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-right: 30px;
@@ -1090,7 +1142,7 @@ label:active:after {
 
 .impressum a:hover {
   text-decoration-style: wavy;
-  text-decoration-color: var(--accent2);
+  text-decoration-color: var(--accent);
   text-underline-position: under;
 }
 
@@ -1108,12 +1160,12 @@ label:active:after {
 @media only screen and (min-width: 1200px) {
   div.main-container {
     width: 100% !important;
-    max-width: 1300px !important;
+    max-width: 1800px !important;
   }
 
   .container {
     width: 100% !important;
-    max-width: 1300px !important;
+    max-width: 1800px !important;
     padding-left: 7% !important;
     padding-right: 7% !important;
   }
@@ -1121,18 +1173,23 @@ label:active:after {
   .navbar-inverse {
     font-size: 15pt;
   }
+  
+  .navbar {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .start-page-body {
     padding-left: 100px !important;
-    margin-top: 50px !important;
+    margin-top: 30px !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .main-container {
     margin-top: -20px;
+    padding-left: 15px !important;
   }
 
   p, .section li, .section ul, .references, .citation {
@@ -1153,21 +1210,15 @@ label:active:after {
     padding-right: 0 !important;
   }
 
-  #TOC, .content {
-    display: none !important;
-  }
-
   .fd {
     position: relative;
-    max-height: 35vh !important;
+    max-height: 45vh !important;
     max-width: 100% !important;
-    background-size: cover !important;
-    background-position-y: 20% !important;
     margin-top: 20px !important;
   }
 
   .navbar-brand {
-    font-size: 25pt !important;
+    font-size: 20pt !important;
   }
 
   .navbar {
@@ -1194,8 +1245,16 @@ label:active:after {
   .main-container {
     width: 100% !important;
     max-width: 1550px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #TOC, .content {
+    display: none !important;
+  }
+  
+  .sidebar {
+    display: none;
   }
 
   h1, .footnotes ol:before {
@@ -1234,7 +1293,7 @@ label:active:after {
     font-size: 7pt;
     font-weight: 120;
     text-transform: uppercase;
-    color: var(--text2);
+    color: var(--text);
   }
 
   .navbar-collapse {
