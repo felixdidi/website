@@ -44,7 +44,7 @@ html_pages <- list.files(here, "[.]html$") %>%
   tibble(page = .) %>% 
   filter(
     str_detect(page, "-r.html$", negate = TRUE),
-    page != "error.html",
+    page != "404.html",
     page != "impressum.html"
   ) %>% mutate(
     mtime = as.Date(file.mtime(page))
