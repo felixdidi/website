@@ -1,0 +1,58 @@
+---
+title: "Felix Dietrich"
+---
+
+<style> .title {display: none !important;}</style>
+
+<div class="col-xs-12 col-sm-12 col-md-5 fd small-start">
+<div id="fd">
+
+</div>
+
+<div class="find-me small-start">
+<a rel="me" href="https://fediscience.org/@felix" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
+<a href="https://twitter.com/Felix_Dietrich" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+<a class="mail" href="mailto:mail@felix-dietrich.de"><i class="fa fa-envelope fa-lg"></i></a>
+<a href="https://orcid.org/0000-0002-0696-3380" target="_blank"><i class="ai ai-orcid fa-lg"></i></a>
+<br><a class="pgp" target="_blank" href="https://keys.openpgp.org/search?q=mail%40felix-dietrich.de">PGP-Key</a>
+</div>
+</div>
+
+
+<div class="section col-xs-12 col-sm-12 col-md-7 start-page-body">
+<h1>Hi! 👋</h1>
+
+I'm a PhD student and research associate at the working group <a target="_blank" href="https://www.mediapsychology.ifp.uni-mainz.de">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz and a teaching associate at the <a target="_blank" href="https://www.phil.uni-mannheim.de/mkw/">Institute for Media and Communication Studies</a>, University of Mannheim.
+
+<br>**My research interests include:**
+
+- digital autonomy and well-being
+- affordances of digital media
+- human-AI interaction
+- media entertainment experiences
+- open & computational communication science
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-5 fd big-start">
+<div id="fd">
+
+</div>
+
+<div class="find-me big-start">
+<a rel="me" href="https://fediscience.org/@felix" target="_blank"><i class="fab fa-mastodon fa-lg"></i></a>
+<a href="https://twitter.com/Felix_Dietrich" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+<a class="mail" href="mailto:mail@felix-dietrich.de"><i class="fa fa-envelope fa-lg"></i></a>
+<a href="https://orcid.org/0000-0002-0696-3380" target="_blank"><i class="ai ai-orcid fa-lg"></i></a>
+<br><a class="pgp" target="_blank" href="https://keys.openpgp.org/search?q=mail%40felix-dietrich.de">PGP-Key</a>
+</div>
+</div>
+
+<div class="section col-xs-12 col-sm-12 col-md-12 start-page-body2">
+
+
+
+</div>
+
+
+

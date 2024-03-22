@@ -1,0 +1,244 @@
+---
+title: "Publications"
+subtitle: "A list of the scientific publications to which I have contributed"
+bibliography: bib/pubs.bib
+csl: bib/apa-cv.csl
+suppress-bibliography: true
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+***
+
+:::: {#pubs}
+
+## Journal Articles
+
+### 2024
+
+<!----------------------------------------------------------------------------->
+
+@dietrichSurprisedCuriousConfused2024
+
+::: paper-info
+
+[[<i class="ai ai-closed-access"></i> PDF](
+https://doi.org/10.1080/15213269.2023.2236939)]{}
+
+[[<i class="ai ai-open-data"></i> Data](
+https://osf.io/82gqu/)]{}
+
+[[<i class="fas fa-code"></i> Code</a>](
+https://osf.io/82gqu/)]{}
+
+[[<i class="ai ai-open-materials"></i> Materials](
+https://osf.io/82gqu/)]{}
+
+:::
+
+### 2023
+
+<!----------------------------------------------------------------------------->
+
+@gilbertTooAmusedStop2023a
+
+::: paper-info
+
+[[<i class="ai ai-open-access"></i> PDF](
+https://osf.io/preprints/psyarxiv/2xnku/)]{}
+
+[[<i class="ai ai-open-data"></i> Data](
+https://osf.io/p5qzc/)]{}
+
+[[<i class="fas fa-code"></i> Code</a>](
+https://osf.io/p5qzc/)]{}
+
+[[<i class="ai ai-open-materials"></i> Materials](
+https://osf.io/p5qzc/)]{}
+
+:::
+
+<!----------------------------------------------------------------------------->
+
+@dietrichWhatConstitutesAutonomy2023a
+
+::: paper-info
+
+[[<i class="fas fa-code"></i> Code</a>](
+https://osf.io/t3dpj/)]{}
+
+:::
+
+
+<!----------------------------------------------------------------------------->
+
+### 2020
+
+@schneiderWhatImportantWhen2020
+
+::: paper-info
+
+[[<i class="ai ai-open-access"></i> PDF](
+files/paper/schneider_domahidi_dietrich_2020.pdf)]{}
+
+[[<i class="ai ai-open-data"></i> Data](
+https://osf.io/pqnk6/)]{}
+
+[[<i class="fas fa-code"></i> Code</a>](
+https://osf.io/pqnk6/)]{}
+
+[[<i class="fas fa-newspaper"></i> meedia.de column [German]](
+https://meedia.de/2021/03/15/ja-nice-wie-junge-menschen-auf-filme-schauen/)]{}
+
+:::
+
+<!----------------------------------------------------------------------------->
+
+***
+
+## Conference Presentations
+
+### 2024
+
+<!----------------------------------------------------------------------------->
+
+@dietrichOpenSourceTransformer2024
+
+<!----------------------------------------------------------------------------->
+
+@dietrichMusicWasMy2024
+
+<!----------------------------------------------------------------------------->
+
+@ernstAgencySerendipityKey2024
+
+<!----------------------------------------------------------------------------->
+
+@ernstZeitlicheStrukturenDigitaler2024
+
+<!----------------------------------------------------------------------------->
+
+### 2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichUsingLargeLanguage2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichAlgorithmicallyCuratedMedia2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichDigitalEmotionContagion2023
+
+<!----------------------------------------------------------------------------->
+
+@krelingWhatPeopleWatch2023
+
+::: paper-info
+
+[[<i class="fas fa-trophy"></i> Best Paper Award](
+https://www.ifp.uni-mainz.de/2023/10/19/best-research-report-fuer-das-team-medienpsychologie/)]{}
+
+:::
+
+<!----------------------------------------------------------------------------->
+
+@rohrOpportunitiesChallengesRealtime2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichCanGetNo2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichWhyAreWe2023
+
+<!----------------------------------------------------------------------------->
+
+@dietrichWhatConstitutesAutonomy2023
+
+<!----------------------------------------------------------------------------->
+
+@ernstDigitalJukeboxRevisited2023
+
+<!----------------------------------------------------------------------------->
+
+@gilbertTimeWellspentGuilty2023
+
+<!----------------------------------------------------------------------------->
+
+@gilbertTooAmusedStop2023
+
+<!----------------------------------------------------------------------------->
+
+### 2022
+
+@dietrichRoleEpistemicEmotions2022
+
+<!----------------------------------------------------------------------------->
+
+@dietrichRoleEpistemicEmotions2022a
+
+<!----------------------------------------------------------------------------->
+
+### 2021
+
+@dietrichAllJustClickbait2021
+
+<!----------------------------------------------------------------------------->
+
+### 2019
+
+@vordererHedonicEudaimonicInnovations2019
+
+<!----------------------------------------------------------------------------->
+
+### 2018
+
+@halfmannWhoDeterminesYour2018
+
+<!----------------------------------------------------------------------------->
+
+@schmittPopulistVoicesExtremist2018
+
+<!----------------------------------------------------------------------------->
+
+***
+
+## Other Publications
+
+### 2023
+
+@dietrichPotenzialDigitalerUnterhaltungsangebote2023
+
+<!----------------------------------------------------------------------------->
+
+### 2022
+
+@dietrichSocialMediaAffordances2022
+
+<!----------------------------------------------------------------------------->
+
+### 2021
+
+@dietrichFakeNewsOder2021
+
+<!----------------------------------------------------------------------------->
+
+***
+
+## Awards
+
+### 2023
+
+*Top Paper Award (1st place)* at the 13th Conference of the Media Psychology Division of the German Psychological Society (DGPs) together with Rebekka Kreling, Alicia Gilbert, and Leonard Reinecke
+
+***
+
+::::
+
+<script src="styles/highlight_name.js"></script>

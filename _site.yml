@@ -11,15 +11,21 @@ navbar:
     - text: "CV"
       href: "cv/CV.pdf"
       icon: far fa-address-card
-    - text: "Blog"
-      href: "blog.html"
-      icon: fas fa-paragraph
+  #  - text: "Blog"
+  #    href: "blog.html"
+  #    icon: fas fa-paragraph
+    - text: "Mastodon"
+      icon: fab fa-mastodon
+      href: https://fediscience.org/@felix
     - text: "Twitter"
       icon: fab fa-twitter
       href: https://twitter.com/Felix_Dietrich
     - text: "GitHub"
       icon: fab fa-github
       href: https://github.com/felixdidi
+    - text: "ORCID"
+      icon: ai ai-orcid
+      href: https://orcid.org/0000-0002-0696-3380
     - text: "OSF"
       icon: ai ai-osf
       href: https://osf.io/uec7n
@@ -33,5 +39,6 @@ output:
   html_document:
     template: styles/template.html
     highlight: monochrome
-    mathjax: local
+    mathjax: styles/mathjax
+    self_contained: false
     

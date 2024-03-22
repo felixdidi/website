@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1D2021" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Error!</title>
+
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+<link rel="stylesheet" href="styles/custom.css" type="text/css">
+<link rel="stylesheet" href="styles/garbata/WebFonts/garbata_regular_macroman/stylesheet.css" type="text/css">
+<link rel="stylesheet" href="styles/academicons-1.9.1/css/academicons.min.css" type="text/css">
+<link rel="stylesheet" href="styles/Reforma/ReformaWebfonts/fonts.css" type="text/css">
+<link rel="stylesheet" href="styles/iA-Fonts/iA-Writer-Mono/Webfonts/fonts.css" type="text/css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#fabd2f">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#fabd2f">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+
+</head>
+
+<body>
+  
+<div class="sidebar" id="sidebar">
+  <a href="index.html"><h1>Felix Dietrich</h1></a>
+  
+<ul>
+  <li>
+  <a href="publications.html">
+    <span class="fas fa-file-alt"></span>
+     
+    Publications
+  </a>
+</li>
+<li>
+  <a href="cv/CV.pdf">
+    <span class="far fa-address-card"></span>
+     
+    CV
+  </a>
+</li>
+<!--<li>
+  <a href="blog.html">
+    <span class="fas fa-paragraph"></span>
+     
+    Blog
+  </a>
+</li> -->
+<li>
+  <a rel="me" href="https://fediscience.org/@felix">
+    <span class="fab fa-mastodon fa-lg"></span>
+    
+    Mastodon
+    </a>
+</li>
+<li>
+  <a href="https://twitter.com/Felix_Dietrich">
+    <span class="fab fa-twitter"></span>
+     
+    Twitter
+  </a>
+</li>
+<li>
+  <a href="https://github.com/felixdidi">
+    <span class="fab fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+<li>
+  <a href="https://orcid.org/0000-0002-0696-3380">
+    <span class="ai ai-orcid"></span>
+     
+    ORCID
+  </a>
+</li>
+<li>
+  <a href="https://osf.io/uec7n">
+    <span class="ai ai ai ai-osf"></span>
+     
+    OSF
+  </a>
+</li>
+<li>
+  <a href="https://www.researchgate.net/profile/Felix_Dietrich8">
+    <span class="ai ai ai ai-researchgate"></span>
+     
+    ResearchGate
+  </a>
+</li>
+</ul>
+</div>
+
+<div id="info" class="info">
+<div class="dm-bg">
+<div class="custom-control" onmouseover="show_accessibility()" onmouseleave="hide_accessibility()">
+  <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+  <label class="custom-control-label" for="darkSwitch">
+  </label>
+</div>
+<div class="dm-label">
+  <span>Contrast</span><br>
+  <a href="impressum.html" onmouseover="show_impressum()" onmouseleave="hide_impressum()">
+    <p class="privacy" style="cursor:pointer">
+      <i class="fas fa-info-circle"></i>
+      Privacy&nbsp;
+    </p>
+  </a>
+</div>
+<div id="impressum" class="impressum">Imprint and<br>Privacy Policy</div>
+<div id="accessibility" class="accessibility">Toggle high contrast<br>for better accessibility</div>
+<div id="made-with-r-link" class="made-with-r-link">View the R source<br>code for this page</div>
+<a href="" id="rmd-download-source" class="made-with-r" onclick="showSourcecode()" onmouseover="show_r()" onmouseleave="hide_r()"><span>made&nbsp;&nbsp;<br>with <i class="fab fa-r-project"></i></span></a></div>
+</div>
+
+<script type="text/javascript">
+
+    function hide_impressum() {
+       var i = document.getElementById("impressum");
+       setTimeout(function(){i.style.right = '-250px';}, 100);
+    }
+
+    function show_impressum() {
+      var i = document.getElementById("impressum");
+      i.style.right = '80px';
+    }
+
+    function hide_accessibility() {
+       var a = document.getElementById("accessibility");
+       setTimeout(function(){a.style.right = '-250px';}, 100);
+    }
+
+    function show_accessibility() {
+      var a = document.getElementById("accessibility");
+      a.style.right = '80px';
+    }
+
+    function hide_r() {
+       var r = document.getElementById("made-with-r-link");
+       setTimeout(function(){r.style.right = '-250px';}, 100);
+    }
+
+    function show_r() {
+      var r = document.getElementById("made-with-r-link");
+      r.style.right = '80px';
+    }
+</script>
+
+<script>
+      function showSourcecode() {
+      var url = window.location.href;
+      if (url.endsWith(".html"))
+       var rmd = url.replace(".html", "-r.html");
+      else rmd = url.concat("index-r.html");
+      window.open(rmd);
+    }
+</script>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Felix Dietrich</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="publications.html">
+    <span class="fas fa-file-alt"></span>
+     
+    Publications
+  </a>
+</li>
+<li>
+  <a href="cv/CV.pdf">
+    <span class="far fa-address-card"></span>
+     
+    CV
+  </a>
+</li>
+<li>
+  <a href="https://fediscience.org/@felix">
+    <span class="fab fa-mastodon"></span>
+     
+    Mastodon
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/Felix_Dietrich">
+    <span class="fab fa-twitter"></span>
+     
+    Twitter
+  </a>
+</li>
+<li>
+  <a href="https://github.com/felixdidi">
+    <span class="fab fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+<li>
+  <a href="https://orcid.org/0000-0002-0696-3380">
+    <span class="ai ai ai ai-orcid"></span>
+     
+    ORCID
+  </a>
+</li>
+<li>
+  <a href="https://osf.io/uec7n">
+    <span class="ai ai ai ai-osf"></span>
+     
+    OSF
+  </a>
+</li>
+<li>
+  <a href="https://www.researchgate.net/profile/Felix_Dietrich8">
+    <span class="ai ai ai ai-researchgate"></span>
+     
+    ResearchGate
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Error!</h1>
+
+</div>
+
+
+<script src="https://felix-dietrich.de/site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="https://felix-dietrich.de/site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://felix-dietrich.de/site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://felix-dietrich.de/site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="https://felix-dietrich.de/site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="https://felix-dietrich.de/site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="https://felix-dietrich.de/site_libs/navigation-1.1/tabsets.js"></script>
+<link href="https://felix-dietrich.de/site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet">
+<link href="https://felix-dietrich.de/site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet">
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+<!-- tabsets -->
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+<!-- code folding -->
+<link rel="stylesheet" href="https://felix-dietrich.de/styles/custom.css" type="text/css">
+<link rel="stylesheet" href="https://felix-dietrich.de/styles/garbata/WebFonts/garbata_regular_macroman/stylesheet.css" type="text/css">
+<link rel="stylesheet" href="https://felix-dietrich.de/styles/academicons-1.9.1/css/academicons.min.css" type="text/css">
+<link rel="stylesheet" href="https://felix-dietrich.de/styles/Reforma/ReformaWebfonts/fonts.css" type="text/css">
+<link rel="stylesheet" href="https://felix-dietrich.de/styles/iA-Fonts/iA-Writer-Mono/Webfonts/fonts.css" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href="https://felix-dietrich.de/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://felix-dietrich.de/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://felix-dietrich.de/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://felix-dietrich.de/favicon/site.webmanifest">
+<link rel="mask-icon" href="https://felix-dietrich.de/favicon/safari-pinned-tab.svg" color="#fabd2f">
+<link rel="shortcut icon" href="https://felix-dietrich.de/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#fabd2f">
+<meta name="msapplication-config" content="https://felix-dietrich.de/favicon/browserconfig.xml">
+<style>body {padding-top: 65px; padding-bottom: 40px; }
+.section h1{ padding-top: 65px; margin-top: -65px; }
+.section h2{ padding-top: 65px; margin-top: -65px; }
+.section h3{ padding-top: 65px; margin-top: -65px; }
+.section h4{ padding-top: 65px; margin-top: -65px; }
+.section h5{ padding-top: 65px; margin-top: -65px; }
+.section h6{ padding-top: 65px; margin-top: -65px; }
+</style>
+<div class="section">
+
+<h2 style="margin-top:0!important";">This page does not exist! :-(</h2>
+<p>I you landed here by accident, you can go back to the <a
+href="https://felix-dietrich.de">personal website of Felix
+Dietrich</a>.</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script src="styles/dark-mode-switch.min.js"></script>
+
+<script>
+
+  var isInViewport = function(elem) {
+    var distance = elem.getBoundingClientRect();
+    return (
+      distance.top < (window.innerHeight || document.documentElement.clientHeight)
+      );
+  };
+
+  var findMe = document.querySelectorAll('h1, h2, h3, h4, p, .table, .sourceCode, .subtitle, .section li, .section ul, .figure, hr, .top-asset, blockquote, .fd');
+
+  window.addEventListener('scroll', function(event) {
+    findMe.forEach(element => {
+      if (isInViewport(element)) {
+        element.classList.add("animate");
+        element.style.animationDelay = "0s";
+      }
+    });
+  }, false);
+
+  window.addEventListener('load', function(event) {
+    findMe.forEach(element => {
+      if (isInViewport(element)) {
+        element.classList.add("animate");
+      }
+    });
+  }, false);
+</script>
+
+<script>
+  if (darkSwitch) {
+    initTheme();
+    darkSwitch.addEventListener("change", function () {
+      resetTheme();
+    });
+  }
+</script>
+
+</body>
+
+</html>

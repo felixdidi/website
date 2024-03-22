@@ -1,0 +1,308 @@
+---
+name: Felix
+surname: Dietrich
+# profilepic: ../fd.jpg
+position: "Research and Teaching Associate"
+address: "Department of Communication, Johannes Gutenberg University Mainz, Germany"
+www: felix-dietrich.de
+email: "mail@felix-dietrich.de"
+twitter: Felix_Dietrich
+orcid: 0000-0002-0696-3380
+# researchgate: Felix_Dietrich8
+# github: felixdidi
+headcolor: 414141 # use black color 
+date: "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%B %Y')`"
+csl: apa-cv.csl
+output: 
+  vitae::awesomecv:
+    pandoc_args:
+      - --lua-filter="lua/strong.lua"
+    keep_tex: yes
+# bibliography: ../bib/pubs.bib
+# suppress-bibliography: true
+
+---
+
+```{r, include=FALSE, eval=FALSE}
+# if footer does not show up, change the following file, line 166 to show_footer
+system.file("rmarkdown", "templates", "awesomecv",
+            "resources", "awesome-cv.tex",
+            package = "vitae"
+) |> file.edit()
+```
+
+
+<!-- based on https://github.com/HanZhang-psych/CV -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae);library(tibble)
+```
+
+# EDUCATION
+
+```{r}
+tribble(
+  ~ Degree,
+  ~ Advisor,
+  ~ Year,
+  ~ Institution,
+#  ~ Where,
+  
+    "PhD Student in Communication Science",
+  "\\textit{Advisor}: Prof. Dr. Leonard Reinecke",
+  "since 10/21",
+  "Johannes Gutenberg University Mainz",
+#  "Mainz, Germany",
+  
+  "Master of Arts (\\textit{with distinction}), Media and Communication Studies — Digital Communication",
+  "\\textit{Thesis}: Fake news or fake brain? The role of epistemic emotions in the processing of cross-cutting news exposure. \\\\ \\textit{German abstract of the thesis published in \\href{http://transfer.dgpuk.de/abstracts/fake-news-oder-fake-brain/}{transfer 25(4)}} \\\\ \\textit{Advisor}: Prof. Dr. Peter Vorderer",
+  "09/19-07/21",
+  "University of Mannheim",
+ # "Mannheim, Germany",
+  
+  "Bachelor of Arts, Media and Communication Studies",
+  "\\textit{Thesis}: Do you know what the algorithm is doing? The influence of customization affordances on autonomy and the intention to self-disclose in social networks. \\\\ \\textit{Advisor}: Dr. Frank M. Schneider",
+  "09/16-08/19",
+  "University of Mannheim",
+ # "Mannheim, Germany",
+  
+) %>%
+  detailed_entries(
+    what = Degree,
+   # when = Year,
+    with = Institution,
+    where = Year,
+    why = Advisor,
+    .protect = FALSE
+  )
+```
+
+# ACADEMIC POSITIONS
+
+```{r}
+tribble(
+  ~ Degree,
+  ~ Advisor,
+  ~ Year,
+  ~ Institution,
+ # ~ Where,
+ 
+   "Research and Teaching Associate at the working group Media Effects and Media Psychology, Department of Communication",
+  "\\textit{Advisor}: Prof. Dr. Leonard Reinecke",
+  "since 10/21",
+  "Johannes Gutenberg University Mainz",
+  # "Mainz, Germany",
+  
+    "Teaching Associate at the Institute for Media and Communication Studies",
+  "\\textit{Teaching courses in Computational Communication Science for the Mannheim Master in Data Science}",
+  "since 02/22",
+  "University of Mannheim",
+ # "Mannheim, Germany",
+  
+  "Research Associate at the Institute for Media and Communication Studies",
+  "\\textit{Supporting a grant application to the European Research Council}",
+  "08/21-12/21",
+  "University of Mannheim",
+ # "Mannheim, Germany",
+) %>%
+  detailed_entries(
+    what = Degree,
+  #  when = Year,
+    with = Institution,
+    where = Year,
+    why = Advisor,
+    .protect = FALSE
+  )
+```
+
+# AWARDS
+
+```{r}
+tribble(
+  ~ Degree,
+  ~ Advisor,
+  ~ Year,
+  ~ Institution,
+ # ~ Where,
+  
+    "together with Rebekka Kreling, Alicia Gilbert, and Leonard Reinecke",
+  "\\textit{at the 13th Conference of the Media Psychology Division of the German Psychological Society (DGPs)}",
+  "09/23",
+  "Top Paper Award",
+) %>%
+  detailed_entries(
+    what = Degree,
+  #  when = Year,
+    with = Institution,
+    where = Year,
+    why = Advisor,
+    .protect = FALSE
+  )
+```
+
+# JOURNAL ARTICLES
+
+```{=tex}
+\begingroup
+\vspace{0.6em}
+\fontsize{9pt}{1em}\bodyfontlight\addfontfeature{StylisticSet={3, 4, 5},Ligatures={Rare,Common,TeX}}\color{text}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+```
+
+```{r}
+bibliography_entries("../bib/pubs-articles.bib") %>% 
+  arrange(desc(issued))
+```
+
+\endgroup
+
+# CONFERENCE PRESENTATIONS
+
+```{=tex}
+\begingroup
+\vspace{0.6em}
+\fontsize{9pt}{1em}\bodyfontlight\addfontfeature{StylisticSet={3, 4, 5},Ligatures={Rare,Common,TeX}}\color{text}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+```
+
+```{r}
+bibliography_entries("../bib/pubs-presentations.bib") %>% 
+  arrange(desc(issued))
+```
+
+\endgroup
+
+# OTHER PUBLICATIONS
+
+```{=tex}
+\begingroup
+\vspace{0.6em}
+\fontsize{9pt}{1em}\bodyfontlight\addfontfeature{StylisticSet={3, 4, 5},Ligatures={Rare,Common,TeX}}\color{text}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+```
+
+```{r}
+bibliography_entries("../bib/pubs-other.bib") %>% 
+  arrange(desc(issued))
+```
+
+\endgroup
+
+# TEACHING EXPERIENCE
+
+```{r}
+readr::read_csv2(here::here("cv/data/teaching.csv")) %>% 
+  detailed_entries(where = date,
+                   what = place,
+                   with = course,
+                   why = description)
+```
+
+# EARLY ACADEMIC EXPERIENCE
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Where,
+  ~ Duty,
+  '04/17 - 07/21',
+  "Research Assistant",
+  "University of Mannheim",
+  "Institute for Media and Communication Studies (Media Psychology), Prof. Dr. Peter Vorderer",
+  '02/21 - 07/21',
+  "Teaching Assistant",
+  "University of Mannheim",
+  "Practical seminar II: Job-related Project Seminar, Dr. Dorothée Hefner",
+  '02/20 - 07/20',
+  "Teaching Assistant",
+  "University of Mannheim",
+  "Practical seminar II: Job-related Project Seminar, Prof. Dr. Angela Keppler",
+  '02/19 - 07/19',
+  "Teaching Assistant",
+  "University of Mannheim",
+  "Practical seminar II: Job-related Project Seminar, Prof. Dr. Angela Keppler",
+  '07/17 - 10/17',
+  "Research Assistant",
+  "University of Mannheim",
+  "CONTRA: Countering Propaganda by Narration Towards Anti-Radical Awareness, funded by the European Commission",
+) %>%
+  detailed_entries(where = Year,
+                   what = Where,
+                   with = Name,
+                   why = Duty) 
+```
+
+# PRACTICAL EXPERIENCE
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Where,
+  ~ Duty,
+  '2013-2015',
+  "Freelance Journalist",
+  "Bergsträßer Anzeiger",
+  "Bensheim, Germany",
+  '2014-2018',
+  'Public Relations & Concept Development',
+  'TasteNext gUG',
+  "Mannheim, Germany",
+  '2015-2020',
+  'Public Relations & Concept Development',
+  'delicom S.L.',
+   "Madrid, Spain"
+) %>%
+  detailed_entries(where = Year,
+                   what = Where,
+                   with = Name,
+                   why = Duty) 
+```
+
+# LANGUAGES
+
+```{r}
+tribble(
+  ~ Language,
+  ~ Level,
+  "German",
+  "Native Speaker",
+  "English",
+  "Fluent",
+  "Mandarin Chinese",
+  "HSK Level III",
+  "Latin",
+  "Latinum"
+) %>%
+  detailed_entries(with = Language,
+                   what = Level) 
+```
+
+
+# PROGRAMMING LANGUAGES
+
+```{r}
+tribble(
+  ~ Language,
+  ~ Level,
+  "R",
+  "advanced",
+  "HTML",
+  "advanced",
+  "CSS",
+  "advanced",
+  "Python",
+  "basic",
+  "LaTeX",
+  "basic",
+  "Bash",
+  "basic"
+) %>%
+  detailed_entries(with = Language,
+                   what = Level) 
+```
