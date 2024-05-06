@@ -26,10 +26,9 @@ I'm a PhD student and research associate at the working group <a target="_blank"
 
 <br>**My research interests include:**
 
-- digital autonomy and well-being
-- affordances of digital media
-- human-AI interaction
-- media entertainment experiences
+- entertainment media use and effects
+- algorithmic curation of media content
+- digital autonomy & mental health
 - open & computational communication science
 
 </div>
