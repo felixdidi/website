@@ -22,7 +22,7 @@ title: "Felix Dietrich"
 <div class="section col-xs-12 col-sm-12 col-md-7 start-page-body">
 <h1>Hi! 👋</h1>
 
-I'm a PhD student and research associate at the working group <a target="_blank" href="https://www.mediapsychology.ifp.uni-mainz.de">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz and a teaching associate at the <a target="_blank" href="https://www.phil.uni-mannheim.de/mkw/">Institute for Media and Communication Studies</a>, University of Mannheim.
+I'm a PhD student and research associate at the working group <a target="_blank" href="https://www.mediapsychology.ifp.uni-mainz.de">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz.
 
 <br>**My research interests include:**
 

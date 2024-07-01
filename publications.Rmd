@@ -20,6 +20,32 @@ output:
 
 <!----------------------------------------------------------------------------->
 
+@gilbertTooAmusedStop2024
+
+::: paper-info
+
+[[<i class="ai ai-closed-access"></i> PDF](
+https://doi.org/10.1093/joc/jqae023)]{}
+
+[[<i class="ai ai-open-access"></i> Preprint](
+https://osf.io/preprints/psyarxiv/2xnku/)]{}
+
+[[<i class="ai ai-preregistered"></i> Preregistration](
+https://osf.io/zujda)]{}
+
+[[<i class="ai ai-open-data"></i> Data](
+https://osf.io/p5qzc/)]{}
+
+[[<i class="fas fa-code"></i> Code</a>](
+https://osf.io/p5qzc/)]{}
+
+[[<i class="ai ai-open-materials"></i> Materials](
+https://osf.io/p5qzc/)]{}
+
+:::
+
+<!----------------------------------------------------------------------------->
+
 @dietrichSurprisedCuriousConfused2024
 
 ::: paper-info
@@ -39,26 +65,6 @@ https://osf.io/82gqu/)]{}
 :::
 
 ### 2023
-
-<!----------------------------------------------------------------------------->
-
-@gilbertTooAmusedStop2023a
-
-::: paper-info
-
-[[<i class="ai ai-open-access"></i> PDF](
-https://osf.io/preprints/psyarxiv/2xnku/)]{}
-
-[[<i class="ai ai-open-data"></i> Data](
-https://osf.io/p5qzc/)]{}
-
-[[<i class="fas fa-code"></i> Code</a>](
-https://osf.io/p5qzc/)]{}
-
-[[<i class="ai ai-open-materials"></i> Materials](
-https://osf.io/p5qzc/)]{}
-
-:::
 
 <!----------------------------------------------------------------------------->
 

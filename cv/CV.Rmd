@@ -96,7 +96,7 @@ tribble(
   
     "Teaching Associate at the Institute for Media and Communication Studies",
   "\\textit{Teaching courses in Computational Communication Science for the Mannheim Master in Data Science}",
-  "since 02/22",
+  "02/22 - 07/24",
   "University of Mannheim",
  # "Mannheim, Germany",
   
