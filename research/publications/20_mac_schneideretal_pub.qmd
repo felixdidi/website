@@ -1,0 +1,29 @@
+---
+title: "What is important when we evaluate movies?"
+subtitle: "Insights from computational analysis of online reviews"
+description: "Media and Communication"
+author:
+  - Frank M. Schneider
+  - Emese Domahidi
+  - Felix Dietrich
+date: 2020-08-13
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@schneiderWhatImportantWhen2020"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai open-access >}} PDF (Open Access)"
+      href: https://doi.org/10.17645/mac.v8i3.3134
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/pqnk6/
+    - icon: code
+      text: Code
+      href: https://osf.io/pqnk6/
+---
+
+::: {#hero-heading}
+:::
+
+The question of what is important when we evaluate movies is crucial for understanding how lay audiences experience and evaluate entertainment products such as films. In line with this, subjective movie evaluation criteria (SMEC) have been conceptualized as mental representations of important attitudes toward specific film features. Based on exploratory and confirmatory factor analyses of self-report data from online surveys, previous research has found and validated eight dimensions. Given the large-scale evaluative information that is available in online users’ comments in movie databases, it seems likely that what online users write about movies may enrich our knowledge about SMEC. As a first fully exploratory attempt, drawing on an open-source dataset including movie reviews from IMDb, we estimated a correlated topic model to explore the underlying topics of those reviews. In 35,136 online movie reviews, the most prevalent topics tapped into three major categories—Hedonism, Actors’ Performance, and Narrative—and indicated what reviewers mostly wrote about. Although a qualitative analysis of the reviews revealed that users mention certain SMEC, results of the topic model covered only two SMEC: Story Innovation and Light-heartedness. Implications for SMEC and entertainment research are discussed.

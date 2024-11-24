@@ -1,0 +1,26 @@
+---
+title: Teaching
+author: ""
+date: ""
+listing:
+  id: teaching
+  contents: teaching.yml
+  type: grid
+  # categories: unnumbered
+  grid-columns: 2
+  grid-item-border: false
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi
+---
+
+::: {#hero-heading}
+:::
+
+I teach classes at the [Johannes Gutenberg University Mainz](https://uni-mainz.de). In the past, I have also taught classes at the [University of Mannheim](https://uni-mannheim.de). In the interest of keeping my teaching materials accessible, the respective course websites are publicly available for modules with a yellow frame. More materials are hosted on my [GitHub](https://github.com/felixdidi) Page or on the [JGU's Moodle Platform](https://lms.uni-mainz.de).
+
+<br>

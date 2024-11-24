@@ -1,0 +1,73 @@
+---
+title: Felix Dietrich
+subtitle: Communication Researcher | Media Psychology
+author: ""
+date: ""
+# page-layout: full
+format: 
+  html:
+    toc: false
+listing:
+  id: pubs
+  page-size: 3
+  contents: 
+    - "publications/*_pub.qmd"
+  fields: [title, subtitle, date, author, description]
+  type: default
+  sort-ui: true
+  filter-ui: true
+  sort: 
+    - "date desc"
+    - title
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/felixdidi
+---
+
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- .navbar-brand { -->
+<!--   display: none; -->
+<!-- } -->
+<!-- </style> -->
+<!-- ``` -->
+
+::: {#hero-heading}
+:::
+
+::: {.grid}
+
+::: {.g-col-md-6 .g-col-12 .fd .small-start}
+:::
+
+::: {.g-col-md-6 .g-col-12}
+
+I'm a PhD student and research associate at the working group <a target="_blank" href="https://www.mediapsychology.ifp.uni-mainz.de">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz.
+
+**My research interests include:**
+
+- entertainment media use and effects
+- algorithmic curation of media content
+- digital autonomy & mental health
+- computational communication science
+
+:::
+
+::: {.g-col-md-6 .g-col-12 .fd .big-start}
+:::
+
+:::
+
+<br>
+
+## Recent Publications
+
+::: {#pubs}
+:::

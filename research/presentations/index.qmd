@@ -1,0 +1,93 @@
+---
+title: Presentations
+author: ""
+date: ""
+format: 
+  html:
+    toc: true
+csl: https://www.zotero.org/styles/apa-cv
+bibliography:
+  ica: "../../bib/pubs-presentations-ica.bib"
+  mediapsych: "../../bib/pubs-presentations-mediapsych.bib"
+  rezfo: "../../bib/pubs-presentations-rezfo.bib"
+  dgpuk: "../../bib/pubs-presentations-dgpuk.bib"
+  other: "../../bib/pubs-presentations-other.bib"
+filters:
+  - multibib
+validate-yaml: false
+link-citations: false
+nocite: '@*'
+about:
+  id: hero-heading
+  template: solana
+---
+
+::: {#hero-heading}
+:::
+
+## ICA
+
+The International Communication Association (ICA) is a global academic association dedicated to advancing the study, teaching, and application of communication through scholarly research, collaboration, and dissemination.
+
+::: {.callout-warning collapse="true" icon=false}
+
+## Expand list of presentations 
+
+::: {#refs-ica}
+:::
+
+:::
+
+## MediaPsych
+
+The MediaPsych Conference, organized by the Media Psychology Division of the German Psychological Society (DGPs), is a biennial event that focuses on advancing research and fostering interdisciplinary dialogue on the psychological aspects of media use and effects.
+
+**Awards:**
+
+*Top Paper Award (1st place)* at the 13th Conference of the Media Psychology Division of the German Psychological Society (DGPs) together with Rebekka Kreling, Alicia Gilbert, and Leonard Reinecke.
+
+::: {.callout-warning collapse="true" icon=false}
+
+## Expand list of presentations 
+
+::: {#refs-mediapsych}
+:::
+
+:::
+
+## Rezfo
+
+The Rezfo (Rezeptions- und Wirkungsforschung) Conference, organized by the Division for Media Use and Effects Research of the German Communication Association (DGPuK), serves as a forum to explore media use, processing, integration into everyday life, and effects, aiming to advance research, foster academic exchange, and support international collaboration and emerging scholars in this field.
+
+::: {.callout-warning collapse="true" icon=false}
+
+## Expand list of presentations 
+
+::: {#refs-rezfo}
+:::
+
+:::
+
+## DGPuK
+
+The main conference of the German Communication Association (DGPuK) is an annual event that brings together researchers and practitioners in communication studies to present and discuss the latest advancements across diverse areas of the field, fostering academic exchange, collaboration, and the promotion of communication science in research and practice.
+
+::: {.callout-warning collapse="true" icon=false}
+
+## Expand list of presentations 
+
+::: {#refs-dgpuk}
+:::
+
+:::
+
+## Other
+
+::: {.callout-warning collapse="true" icon=false}
+
+## Expand list of presentations 
+
+::: {#refs-other}
+:::
+
+:::

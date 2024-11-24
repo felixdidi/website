@@ -1,0 +1,36 @@
+---
+title: "Surprised–curious–confused, empathetic, and entertained?"
+subtitle: "The role of epistemic emotions and empathy in eudaimonic entertainment experiences and political news processing"
+description: "Media Psychology"
+author:
+  - Felix Dietrich
+  - Tanja Kugler
+  - Sarah Hennings
+  - Celine Conrad
+  - Frank M. Schneider
+  - Peter Vorderer
+date: 2023-07-18
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@dietrichSurprisedCuriousConfused2024"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai closed-access >}} PDF"
+      href: https://doi.org/10.1080/15213269.2023.2236939
+    #- text: "{{< ai open-access >}} Postprint (Open Access)"
+    #  href: 
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/82gqu/
+    - icon: code
+      text: Code
+      href: https://osf.io/82gqu/
+    - text: "{{< ai open-materials >}} Materials"
+      href: https://osf.io/82gqu/
+---
+
+::: {#hero-heading}
+:::
+
+Based on the dual-process model of entertainment experiences and motivated cognition, we propose that specific affective states such as surprise, curiosity, and confusion (so-called epistemic emotions), as well as empathy, are involved in eudaimonic entertainment experiences while reading political news. We further assume that these emotions are related to normatively desirable outcomes such as deliberation within, information seeking, and knowledge acquisition about political topics. To test the hypothesized model, we conducted a between-subjects online experiment (N = 407) that used different stimuli to induce the emotions of interest while simultaneously varying news topics. Structural equation modeling revealed that the data mostly supported our hypotheses. Overall, we find that through these affective states, even soft news can enable normatively desirable outcomes. All data and materials can be accessed from <https://osf.io/82gqu/>.

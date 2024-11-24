@@ -1,0 +1,37 @@
+---
+title: "Too amused to stop?"
+subtitle: "Self-control and the disengagement process on Netflix"
+description: "Journal of Communication"
+author:
+  - Alicia Gilbert
+  - Leonard Reinecke
+  - Adrian Meier
+  - Susanne Baumgartner
+  - Felix Dietrich
+date: 2024-06-27
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@gilbertTooAmusedStop2024"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai closed-access >}} PDF"
+      href: https://doi.org/10.1093/joc/jqae023
+    - text: "{{< ai open-access >}} Postprint (Open Access)"
+      href: https://osf.io/preprints/psyarxiv/2xnku/
+    - text: "{{< ai preregistered >}} Preregistration"
+      href: https://osf.io/zujda
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/p5qzc/
+    - icon: code
+      text: Code
+      href: https://osf.io/p5qzc/
+    - text: "{{< ai open-materials >}} Materials"
+      href: https://osf.io/p5qzc/
+---
+
+::: {#hero-heading}
+:::
+
+Consuming media entertainment often challenges recipients’ self-control. While past research related self-control almost exclusively to whether individuals engage in media use, it might be equally relevant for the disengagement from media use. Testing core assumptions of the Appraisal of Media Use, Self-Control, and Entertainment (AMUSE) model, the present study investigates the situational interplay of self-control and affective appraisals in predicting disengagement from Netflix use. Preregistered hypotheses were tested based on an event-contingent experience sampling design, in which 205 adult Netflix users in the Netherlands and Germany were tracked and surveyed for two weeks. Results demonstrate that disengagement is contingent upon enjoyment and appreciation and that enjoyment, in turn, can be "spoiled" by feeling guilty. Self-control influenced goal conflict and enjoyment throughout the reception process. We discuss opportunities for modeling disengagement from media use with situational research approaches.

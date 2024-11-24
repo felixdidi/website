@@ -1,0 +1,44 @@
+project:
+  type: website
+  lib-dir: site_libs
+  
+lang: en
+
+website:
+  title: "Felix Dietrich"
+  site-url: https://felix-dietrich.de
+  page-footer: "[Imprint & Privacy Policy](/imprint.qmd)"
+  favicon: img/favicon.png
+  navbar:
+    id: top-nav
+    search: true
+    pinned: false
+    toggle-position: right
+    right:
+      - research/index.qmd
+      - teaching/index.qmd
+    tools:
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/felixdidi
+
+format:
+  html:
+    toc: true
+    toc-title: " "
+    number-sections: false
+    smooth-scroll: true
+    footnotes-hover: true
+    code-fold: false
+    code-line-numbers: true
+    highlight-style: gruvbox
+    link-external-newwindow: true
+theme:
+  light: [cosmo, styles/light.scss]
+  dark: [cosmo, styles/dark.scss]
+  
+execute:
+  freeze: auto

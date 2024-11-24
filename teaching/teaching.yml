@@ -1,0 +1,52 @@
+- title: "HS Inhaltsanalyse: Inhalte öffentlicher Kommunikation"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  path: https://felixdidi.github.io/24-2-ia/
+  description: "Seminar im Computational Methods Track"
+  categories: ["2024 Fall"]
+- title: "SE Neue Medien / Onlinekommunikation"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  path: https://felixdidi.github.io/24-1-nmok/
+  description: "Theorieseminar im Modul Medienwandel"
+  categories: ["2024 Spring"]
+- title: "DA110 Computational Analysis of Communication"
+  subtitle: "MSc Data Science @ U Mannheim"
+  path: https://felixdidi.github.io/24-1-ccs/
+  description: "Data Analytics Methods Module"
+  categories: ["2024 Spring"]
+- title: "SE Begriffe & Theorien der Publizistikwissenschaft"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  categories: ["2023 Fall"]
+  description: "Zentrale Forschungsbereiche des Fachs"
+- title: "DA110 Computational Analysis of Communication"
+  subtitle: "MSc Data Science @ U Mannheim"
+  categories: ["2023 Fall"]
+  description: "Data Analytics Methods Module"
+- title: "SE Neue Medien / Onlinekommunikation"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  path: https://felixdidi.github.io/23-1-nmok/
+  categories: ["2023 Spring"]
+  description: "Theorieseminar im Modul Medienwandel"
+- title: "DA110 Computational Analysis of Communication"
+  subtitle: "MSc Data Science @ U Mannheim"
+  categories: ["2023 Spring"]
+  description: "Data Analytics Methods Module"
+- title: "SE Wissenschaftliche Texte lesen, verstehen & schreiben"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  categories: ["2022 Fall"]
+  description: "Grundlagen des wissenschaftlichen Arbeitens"
+- title: "DA110 Computational Analysis of Communication"
+  subtitle: "MSc Data Science @ U Mannheim"
+  categories: ["2022 Fall"]
+  description: "Data Analytics Methods Module"
+- title: "SE Medienwirkungsforschung"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  categories: ["2022 Spring"]
+  description: "Theorieseminar im Modul Medienwirkungsforschung"
+- title: "SE Neue Medien / Onlinekommunikation"
+  subtitle: "BA Communication Science @ JGU Mainz"
+  description: "Theorieseminar im Modul Medienwandel"
+  categories: ["2022 Spring"]
+- title: "DA100 Automated Media Content Analysis"
+  subtitle: "MSc Data Science @ U Mannheim"
+  categories: ["2022 Spring"]
+  description: "Data Analytics Methods Module"

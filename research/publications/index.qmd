@@ -1,0 +1,63 @@
+---
+title: Publications
+author: ""
+date: ""
+# format: 
+#   html:
+#     toc: false
+# listing:
+#   id: highlights
+#   contents: pubs.yml
+#   type: default
+#   page-size: 1
+#   sort: 
+#     - "date desc"
+#     - title
+csl: https://www.zotero.org/styles/apa-cv
+bibliography:
+  peer: "../../bib/pubs-articles.bib"
+  preprints: "../../bib/pubs-preprints.bib"
+  other: "../../bib/pubs-other.bib"
+filters:
+  - multibib
+validate-yaml: false
+link-citations: false
+nocite: '@*'
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-0696-3380
+    - text: "{{< ai osf >}} OSF"
+      href: https://osf.io/uec7n
+    - text: "{{< ai researchgate >}} ResearchGate"
+      href: https://www.researchgate.net/profile/Felix_Dietrich8
+    - text: "{{< ai clarivate >}} Web of Science"
+      href: https://www.webofscience.com/wos/author/record/KIC-8786-2024  
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.de/citations?user=FtNEJ-sAAAAJ
+---
+
+<!-- ## Recent Publications -->
+
+<!-- ::: {#highlights} -->
+<!-- ::: -->
+
+::: {#hero-heading}
+:::
+
+## Preprints
+
+::: {#refs-preprints}
+:::
+
+## Peer-Reviewed Journal Articles
+
+::: {#refs-peer}
+:::
+
+## Other
+
+::: {#refs-other}
+:::

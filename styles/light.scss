@@ -1,0 +1,226 @@
+/*-- scss:defaults --*/
+$primary: #282828 !default;
+$body-color: #282828 !default;
+$body-bg: #ffffff !default;
+$link-color: #282828 !default;
+$navbar-hl: #fabd2f !default;
+$navbar-bg: #ffffff !default;
+$navbar-fg: #504945 !default;
+$footer-fg: #928374 !default;
+$toc-active-border: #282828 !default;
+$toc-inactive-border: #928374 !default;
+$blue:    #458588 !default;
+$purple:  #b16286 !default;
+$red:     #cc241d !default;
+$orange:  #fe8019 !default;
+$yellow:  #fabd2f !default;
+$green:   #98971a !default;
+$teal:    #689d6a !default;
+$grey:    #928374 !default;
+$font-family-sans-serif: "Aleo", sans-serif !default;
+
+/*-- scss:rules --*/
+@import url(https://fonts.bunny.net/css?family=aleo:400,400i,700,700i,900,900i);
+
+body {
+  transition: 0.3s;
+}
+
+h2 {
+  border: none;
+  border-color: $yellow;
+}
+
+/*add hyphenation
+p, .abstract {
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}*/
+
+/*style banner*/
+.quarto-title-banner {
+  background: $body-bg !important;
+}
+
+/*style hyperlinks*/
+.content a {
+  color: $body-color;
+  text-decoration: underline !important;
+  text-decoration-color: $yellow !important;
+  text-decoration-thickness: 2px;
+}
+.content a:hover {
+  color: $body-color !important;
+  text-decoration-style: wavy !important;
+}
+#title-block-header a {
+  color: $body-color !important;
+}
+.about-links a {
+  text-decoration: none !important;
+  color: $body-color !important;
+  border-color: $grey !important;
+}
+.quarto-listing a {
+  text-decoration: none !important;
+}
+
+/*style navbar*/
+.navbar-brand {
+  font-weight: 600;
+  font-size: var(--bs-nav-link-font-size);
+  text-decoration: underline !important;
+  text-decoration-color: $yellow !important;
+  text-decoration-thickness: 2px;
+}
+
+.navbar-nav, .navbar-nav a {
+  font-weight: 600;
+}
+
+.navbar-nav a {
+  color: $navbar-fg;
+}
+
+.navbar-nav .nav-link.active {
+  color: $navbar-fg;
+  text-decoration: underline !important;
+  text-decoration-color: $yellow !important;
+  text-decoration-thickness: 2px;
+}
+
+.navbar-nav a:hover {
+  color: $navbar-fg !important;
+  text-decoration: underline !important;
+  text-decoration-color: $yellow !important;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy !important;
+}
+
+/*hide unwanted output*/
+.cell-output.cell-output-stdout {
+  display: none;
+}
+
+/*style tables*/
+.gt_table {
+  font-family: inherit !important;
+  font-size: 0.9rem !important;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+.card-subtitle {
+  font-size: .8rem;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.quarto-listing-cols-2 > div:has(a.quarto-grid-link[href]:not([href=""])) {
+  border: 2px solid $yellow;
+  border-radius: 5px;
+}
+
+.listing-category {
+  color: $grey !important;
+  border: none !important;
+}
+
+/*style filter and order tools*/
+.form-control, .form-select, .input-group-text {
+  border-color: $grey;
+}
+
+.input-group-text {
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+/*style pagination for listing*/
+.page-link:hover {
+  background: $yellow;
+  color: $body-bg;
+}
+
+/*style listing*/
+.quarto-post {
+  border-bottom: 0.5px solid $grey !important;
+  padding-bottom: 1.5em;
+}
+
+/*style selections*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: $body-bg;
+  background: $yellow;
+}
+
+::selection {
+  color: $body-bg;
+  background: $yellow;
+}
+
+/*style start page image*/
+.fd {
+  position: relative;
+  height: 300px;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  background-image: url('img/fd.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-x: 50%;
+  background-position-y: 40%;
+  border-radius: 7px;
+}
+
+.fd::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 100%;
+  height: 100%;
+  border-top: 1.5px solid $yellow;
+  border-left: 1.5px solid $yellow;
+  border-top-left-radius: 7px;
+}
+
+.fd::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1.5px solid $yellow;
+  border-right: 1.5px solid $yellow;
+  border-bottom-right-radius: 7px;
+}
+
+@media only screen and (min-width: 767px) {
+  .small-start {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .fd {
+    position: relative;
+    height: 500px;
+    max-height: 60vw !important;
+    width: 100% !important;
+    margin-top: 0;
+  }
+  
+  .big-start {
+    display: none !important;
+  }
+}
