@@ -23,6 +23,9 @@ about:
   id: hero-heading
   template: solana
   links:
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/felix-dietrich.de
     - icon: github
       text: GitHub
       href: https://github.com/felixdidi
