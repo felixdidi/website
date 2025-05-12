@@ -160,6 +160,10 @@ p, .abstract {
   border-color: $grey !important;
 }
 
+.listing-title a {
+  font-weight: 600;
+}
+
 /*style selections*/
 ::-moz-selection {
   /* Code for Firefox */
