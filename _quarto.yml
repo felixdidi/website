@@ -39,6 +39,7 @@ format:
     code-line-numbers: true
     highlight-style: gruvbox
     link-external-newwindow: true
+    respect-user-color-scheme: true
 theme:
   light: [cosmo, styles/light.scss]
   dark: [cosmo, styles/dark.scss]
