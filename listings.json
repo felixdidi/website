@@ -1,14 +1,5 @@
 [
   {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/publications/24_iwc_dietrichetal_pub.html",
-      "/research/publications/24_joc_gilbertetal_pub.html",
-      "/research/publications/23_mep_dietrichetal_pub.html",
-      "/research/publications/20_mac_schneideretal_pub.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/research/publications/24_iwc_dietrichetal_pub.html",
@@ -20,5 +11,14 @@
   {
     "listing": "/teaching/index.html",
     "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/publications/24_iwc_dietrichetal_pub.html",
+      "/research/publications/24_joc_gilbertetal_pub.html",
+      "/research/publications/23_mep_dietrichetal_pub.html",
+      "/research/publications/20_mac_schneideretal_pub.html"
+    ]
   }
 ]
