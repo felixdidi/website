@@ -1,0 +1,33 @@
+---
+title: "101 reasons to stop"
+subtitle: "A systematic review of media cues for disengagement"
+description: "Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter"
+author:
+  - Alicia Gilbert
+  - Frauke Schöne
+  - Rebekka Kreling
+  - Felix Dietrich
+  - Leonard Reinecke
+date: 2025-09-23
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@gilbert101ReasonsStop2025"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai open-access >}} PDF"
+      href: https://dl.acm.org/doi/pdf/10.1145/3749012.3749078
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/z25ut/
+    - icon: code
+      text: Code
+      href: https://osf.io/z25ut/
+    - text: "{{< ai open-materials >}} Materials"
+      href: https://osf.io/z25ut/
+---
+
+::: {#hero-heading}
+:::
+
+In the current media environment, technology design and media content are optimized for entertainment and a frictionless user experience – at times at the cost of frustrating users who have problems to disengage from media use sessions. In order to improve the disengagement experience, it is of interest which aspects of technology design impact users’ termination of a media use session. A systematic review identified *n* = 27 publications that address *k* = 90 media cues to overview the literature and to theoretically systematise media cues for disengagement. Results show that the research field is still small yet investigating many idiosyncratic media cues for disengagement from a variety of media use types. A focus currently lies on Human-Computer Interaction approaches to online search and information as well as gaming. We systematise the identified media cues along the analysis levels of the Hierarchical Taxonomy of Computer-Mediated Communication (device, application, feature, interaction, and message cues) to uncover patterns and gaps in the literature. Based on the findings, we formulate a research agenda for situational, theory-driven research on media cues and disengagement across different forms of media use.

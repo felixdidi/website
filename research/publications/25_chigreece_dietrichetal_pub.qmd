@@ -1,0 +1,37 @@
+---
+title: "The differential effects of algorithmic recommendations on user experience"
+subtitle: "Enjoyment and serendipity in everyday music streaming"
+description: "Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter"
+author:
+  - Felix Dietrich
+  - Alicia Ernst
+  - Rebekka Kreling
+  - Alicia Gilbert
+  - Benedikt Rohr
+  - Michael Scharkow
+  - Leonard Reinecke
+date: 2025-09-23
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@dietrichDifferentialEffectsAlgorithmic2025"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai open-access >}} PDF"
+      href: https://dl.acm.org/doi/pdf/10.1145/3749012.3749040
+    - text: "{{< ai preregistered >}} Preregistration"
+      href: https://osf.io/j9yb3/
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/9bywg/
+    - icon: code
+      text: Code
+      href: https://osf.io/9bywg/
+    - text: "{{< ai open-materials >}} Materials"
+      href: https://osf.io/9bywg/
+---
+
+::: {#hero-heading}
+:::
+
+The rise of music streaming services such as Spotify has transformed music listening behavior. Most prominently, online recommender systems foster highly individualized exposure to content and substantially shape user experience (UX). Yet, no research so far has investigated whether good or bad UX in the context of algorithmically curated music listening may be attributed to the actual functions of the algorithm (i.e., prevalence of personalized suggestions), users’ perceptions of the algorithm (i.e., interface transparency; individual perception and general algorithmic awareness), or both. In the present study, we attempt to separate these components of algorithmic curation by exploring their differential effects on users’ experience of enjoyment and serendipity. We employed a linkage design within which we combined data collected through the experience sampling method with digital trace data about the listening behavior of participants collected through the Spotify API. We recruited 144 participants, resulting in *T* = 6,920 situational measurement occasions, of which 40% (*t* = 2,786) were preceded by a Spotify listening session. We find that sessions characterized by more algorithmic curation were enjoyed less. This finding emerged both for the objectively measured prevalence of algorithmic curation (with and without interface cues signaling the presence of algorithmic curation) and for users’ subjective perception of algorithmic curation. Furthermore, sessions with a higher prevalence of algorithmic curation were perceived as more novel and unexpected. This novelty, however, was evaluated more positively only by users with a high awareness for automated decision-making in situations in which Spotify's interface provided them with cues about the algorithm's presence. These findings indicate that algorithmic recommendations may not always contribute to better UX but can be beneficial in specific use cases such as content discovery, yet only if users are aware that they are interacting with an algorithm and these interactions are in line with their goals.
