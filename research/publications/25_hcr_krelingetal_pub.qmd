@@ -18,7 +18,7 @@ about:
     - text: "{{< ai closed-access >}} PDF"
       href: https://doi.org/10.1093/hcr/hqaf019
     - text: "{{< ai open-access >}} Postprint (Open Access)"
-      href: https://osf.io/preprints/psyarxiv/2xnku/
+      href: https://osf.io/utjre/
     - text: "{{< ai preregistered >}} Preregistration"
       href: https://osf.io/cjdnp/?view_only=c006be400c2f4f6aadf728730479f763
     - text: "{{< ai open-data >}} Data"
