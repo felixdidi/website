@@ -4,8 +4,10 @@
     "items": []
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/index.html",
     "items": [
+      "/research/publications/25_chigreece_gilbertetal_pub.html",
+      "/research/publications/25_chigreece_dietrichetal_pub.html",
       "/research/publications/25_hcr_krelingetal_pub.html",
       "/research/publications/24_iwc_dietrichetal_pub.html",
       "/research/publications/24_joc_gilbertetal_pub.html",
@@ -14,8 +16,10 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/research/index.html",
     "items": [
+      "/research/publications/25_chigreece_gilbertetal_pub.html",
+      "/research/publications/25_chigreece_dietrichetal_pub.html",
       "/research/publications/25_hcr_krelingetal_pub.html",
       "/research/publications/24_iwc_dietrichetal_pub.html",
       "/research/publications/24_joc_gilbertetal_pub.html",
