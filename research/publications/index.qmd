@@ -52,7 +52,7 @@ about:
 ::: {#refs-preprints}
 :::
 
-## Peer-Reviewed Journal Articles
+## Peer-Reviewed
 
 ::: {#refs-peer}
 :::
