@@ -4,8 +4,9 @@
     "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/research/index.html",
     "items": [
+      "/research/publications/26_hcr_ernstetal_pub.html",
       "/research/publications/25_chigreece_gilbertetal_pub.html",
       "/research/publications/25_chigreece_dietrichetal_pub.html",
       "/research/publications/25_hcr_krelingetal_pub.html",
@@ -16,8 +17,9 @@
     ]
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/index.html",
     "items": [
+      "/research/publications/26_hcr_ernstetal_pub.html",
       "/research/publications/25_chigreece_gilbertetal_pub.html",
       "/research/publications/25_chigreece_dietrichetal_pub.html",
       "/research/publications/25_hcr_krelingetal_pub.html",
