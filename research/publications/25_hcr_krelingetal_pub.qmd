@@ -10,7 +10,7 @@ author:
 date: 2025-09-02
 csl: https://www.zotero.org/styles/apa
 bibliography: "../../bib/pubs-articles.bib"
-nocite: "@krelingWhatPeopleWatch2025"
+nocite: "@krelingWhatPeopleWatch2026"
 about:
   id: hero-heading
   template: solana

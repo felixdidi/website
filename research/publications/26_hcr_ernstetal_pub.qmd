@@ -1,0 +1,35 @@
+---
+title: "Revisiting the digital jukebox in daily life"
+subtitle: "Applying Mood Management Theory to algorithmically curated music streaming environments"
+description: "Human Communication Research"
+author:
+  - Alicia Ernst
+  - Felix Dietrich
+  - Benedikt Rohr
+  - Leonard Reinecke
+  - Michael Scharkow
+date: 2026-01-27
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@ernstRevisitingDigitalJukebox2026"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai closed-access >}} PDF"
+      href: https://doi.org/10.1093/hcr/hqaf030
+    - text: "{{< ai open-access >}} Postprint (Open Access)"
+      href: https://osf.io/preprints/psyarxiv/7eb4g
+    - text: "{{< ai preregistered >}} Preregistration"
+      href: https://osf.io/2sh9k/?view_only=ef9f31bf7e78461a866007b2c85efd39
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/a8pek
+    - icon: code
+      text: Code
+      href: https://osf.io/a8pek
+---
+
+::: {#hero-heading}
+:::
+
+A large body of experimental evidence has contributed to our understanding of Mood Management Theory (MMT) in the context of music. Extant research, however, lacks insights into everyday mood regulation through music listening, especially on music streaming services, where users’ choices are shaped by both self-selection and algorithmically personalized recommendations. Hence, we tested MMT using a novel in situ approach and investigated whether variations in self- versus algorithmically personalized music choices would moderate MMT’s proposed relationships between mood and music use. In a preregistered, two-week study, we combined experience sampling surveys with logged music streaming and audio feature metadata obtained via the Spotify API, utilizing 6,864 surveys from 144 listeners. Results largely indicated no support for MMT’s predictions. In addition, higher algorithmic personalization did not reinforce or distort MMT-related patterns. Our findings suggest re-specifying classic entertainment theories, such as MMT, for novel technological and methodological conditions.
