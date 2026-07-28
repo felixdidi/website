@@ -1,0 +1,35 @@
+---
+title: "Music was my first love"
+subtitle: "Biographic resonance makes everyday music listening meaningful"
+description: "Communication Research"
+author:
+  - Felix Dietrich
+  - Alicia Ernst
+  - Benedikt Rohr
+  - Michael Scharkow
+  - Leonard Reinecke
+date: 2026-07-26
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@dietrichMusicWasMy2026"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai closed-access >}} PDF"
+      href: https://doi.org/10.1177/00936502261468400
+    # - text: "{{< ai open-access >}} Postprint (Open Access)"
+    #   href: 
+    - text: "{{< ai preregistered >}} Preregistration"
+      href: https://osf.io/w6eg4
+    - text: "{{< ai open-data >}} Data"
+      href: https://osf.io/vmts5
+    - icon: code
+      text: Code
+      href: https://osf.io/vmts5
+---
+
+::: {#hero-heading}
+:::
+
+Despite much research on eudaimonic media experiences, little is known about how and why certain content is perceived as meaningful by certain users in certain situations. We therefore examine biographic resonance — connections between entertainment content and users’ biographic memories — during everyday music listening on Spotify and propose that memory recall, as well as its emotional valence, relate to meaningfulness via distinct patterns of intrinsic need satisfaction. Results from a preregistered, intensive-longitudinal study (144 persons; 6,920 situations) reveal that biographic resonance relates to both high- and low-effort modes of eudaimonic entertainment. Moreover, by linking users’ self-reports with their tracked digital music use (2,786 sessions; 107,147 songs), we find that the occurrence and quality of biographic resonance vary across situations and are shaped by both content and contextual factors within algorithmically curated environments. Our results highlight how resonances between media users’ selves and entertainment content foster situational meaningfulness in everyday life.

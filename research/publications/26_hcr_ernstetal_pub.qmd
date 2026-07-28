@@ -21,7 +21,7 @@ about:
     - text: "{{< ai open-access >}} Postprint (Open Access)"
       href: https://osf.io/preprints/psyarxiv/7eb4g
     - text: "{{< ai preregistered >}} Preregistration"
-      href: https://osf.io/2sh9k/?view_only=ef9f31bf7e78461a866007b2c85efd39
+      href: https://osf.io/2sh9k
     - text: "{{< ai open-data >}} Data"
       href: https://osf.io/a8pek
     - icon: code
