@@ -18,7 +18,7 @@ about:
   id: hero-heading
   template: solana
   links:
-    - text: "{{< ai open-access >}} PDF"
+    - text: "{{< ai open-access >}} PDF (Open Access)"
       href: https://dl.acm.org/doi/pdf/10.1145/3749012.3749040
     - text: "{{< ai preregistered >}} Preregistration"
       href: https://osf.io/j9yb3/
