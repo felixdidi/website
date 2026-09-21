@@ -1,0 +1,29 @@
+---
+title: "Gebrauchsfertige, Open Source Large Language Models auf Hugging Face"
+subtitle: "als Forschungsinfrastruktur für die standardisierte Inhaltsanalyse von Texten"
+description: "Publizistik"
+author:
+  - Daniel Possler
+  - Felix Dietrich
+  - Jule Scheper
+  - Anica Lammers
+  - Anna Spatzenegger
+date: 2026-09-11
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@posslerGebrauchsfertigeOpenSource2026"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai open-access >}} PDF (Open Access)"
+      href: https://doi.org/10.1007/s11616-026-00942-w
+    - icon: code
+      text: "Tutorial Website"
+      href: https://www.llm-content-analysis.com
+---
+
+::: {#hero-heading}
+:::
+
+With the growing availability of large amounts of text and high computing power, automated content analysis is becoming increasingly important in communication research. However, there is a lack of easy-to-use and powerful tools for standardized automated content analyses of texts. Large Language Models (LLMs) and models for classifying texts developed on this basis can contribute to overcoming this shortcoming. LLMs are characterized by a deep language “understanding” and, therefore, allow for particularly valid text coding. Moreover, ready-to-use LLM-based models are freely available (Open Source) on the platform Hugging Face and can be used for content analysis with just a few lines of Python code. This article introduces these ready-to-use LLMs on Hugging Face as a research infrastructure for standardized content analysis of texts. After providing an overview of the functionality of LLMs, three types of models for coding texts are introduced—(1) category-specific encoder models, (2) task-specific encoder models, and (3) universal decoder models—and their potential and limitations are discussed in comparison with established content analysis methods. We then characterize Hugging Face as a research infrastructure for hosting and using LLMs. A schematic guide and an in-depth online tutorial, available on the companion website of this paper ([www.llm-content-analysis.com](http://www.llm-content-analysis.com)), explain how to apply ready-to-use LLMs via Hugging Face for standardized content analysis. Finally, we illustrate the application and validation of LLM-based methods via Hugging Face in an empirical case study using the example of coding tonality in newspaper articles and social media posts. Overall, this paper demonstrates the great potential of ready-to-use LLMs on Hugging Face as a research infrastructure for the content analysis of texts.
