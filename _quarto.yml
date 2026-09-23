@@ -17,6 +17,7 @@ website:
     right:
       - research/index.qmd
       - teaching/index.qmd
+      - resources/index.qmd
     tools:
     - icon: bluesky
       text: Bluesky
@@ -40,9 +41,10 @@ format:
     highlight-style: gruvbox
     link-external-newwindow: true
     respect-user-color-scheme: true
+    include-after-body: styles/scripts.html
 theme:
-  light: [cosmo, styles/light.scss]
-  dark: [cosmo, styles/dark.scss]
+  light: [cosmo, styles/light.scss, styles/components.scss]
+  dark: [cosmo, styles/dark.scss, styles/components.scss]
   
 execute:
   freeze: auto

@@ -1,0 +1,27 @@
+<%
+// Course listing, using the shared entry-* styles. The first category
+// ("2026 Spring") gives year and term. Items with an external `path`
+// link to a public course website; the others are plain rows.
+const isLinked = (item) => item.path && /^https?:\/\//.test(item.path) && !item.path.includes("felix-dietrich.de/teaching");
+const semester = (item) => {
+  const [year, ...term] = ((item.categories || [])[0] || "").split(" ");
+  return { year, term: term.join(" ") };
+};
+%>
+```{=html}
+<div class="list entry-list" data-group-years>
+<% for (const item of items) { const linked = isLinked(item); const { year, term } = semester(item); %>
+<div class="entry" <%= metadataAttrs(item) %>>
+<<%= linked ? `a href="${item.path}"` : "div" %> class="entry-row<%- linked ? " entry-link" : "" %>">
+<div class="entry-year"><%= year %></div>
+<div class="entry-body">
+<div class="entry-kicker"><%= [term, item.subtitle].filter(Boolean).join(" · ") %></div>
+<h3 class="no-anchor entry-title listing-title"><%= item.title %></h3>
+<% if (item.description) { %><div class="entry-meta listing-description"><%= item.description %></div><% } %>
+</div>
+<% if (linked) { %><div class="entry-arrow is-persistent">Course website <i class="bi bi-arrow-up-right" aria-hidden="true"></i></div><% } %>
+</<%= linked ? "a" : "div" %>>
+</div>
+<% } %>
+</div>
+```

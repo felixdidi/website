@@ -6,13 +6,31 @@ date: ""
 format: 
   html:
     toc: false
+# the former presentations subpage now lives here (old links redirect)
+aliases:
+  - presentations/index.html
+# conference presentations: one bibliography per conference (multibib)
+csl: https://www.zotero.org/styles/apa-cv
+bibliography:
+  ica: "../bib/pubs-presentations-ica.bib"
+  mediapsych: "../bib/pubs-presentations-mediapsych.bib"
+  rezfo: "../bib/pubs-presentations-rezfo.bib"
+  dgpuk: "../bib/pubs-presentations-dgpuk.bib"
+  other: "../bib/pubs-presentations-other.bib"
+filters:
+  - multibib
+validate-yaml: false
+link-citations: false
+nocite: '@*'
 listing:
   id: pubs
   page-size: 20
   contents: 
     - "publications/*_pub.qmd"
   fields: [title, subtitle, date, author, description]
-  type: default
+  type: custom
+  template: ../_listings/publications.ejs
+  date-format: "YYYY"
   sort-ui: true
   filter-ui: true
   sort: 
@@ -37,6 +55,125 @@ about:
 ::: {#hero-heading}
 :::
 
-Please select a paper for open access versions of the manuscript, preregistrations, data, materials, and analysis code. A complete list of publications and preprints (work-in-progress) can be found [here](publications/index.qmd). For conference presentations, see [here](presentations/index.qmd).
+I study how people engage with entertainment media, and how that's changing now that algorithms shape and personalize much of what we watch. My work uses data science approaches, often drawing on large-scale data and situational surveys of individual media use, to explore what we enjoy, what we take away from a media experience, and how this affects our mental health and wellbeing. 
 
-<br>
+## Publications
+
+Select a paper below for more information about my research projects, including open access versions of all manuscripts, as well as preregistrations, data, materials, and analysis code.
+
+::: {#pubs}
+:::
+
+## Conference Presentations
+
+::: {.conference}
+::: {.entry-kicker}
+International Communication Association
+:::
+
+### ICA
+
+The International Communication Association (ICA) is a global academic association dedicated to advancing the study, teaching, and application of communication through scholarly research, collaboration, and dissemination.
+
+```{=html}
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+```
+
+::: {#refs-ica}
+:::
+
+```{=html}
+</details>
+```
+:::
+
+::: {.conference}
+::: {.entry-kicker}
+Media Psychology Division · German Psychological Society (DGPs)
+:::
+
+### MediaPsych
+
+The MediaPsych Conference, organized by the Media Psychology Division of the German Psychological Society (DGPs), is a biennial event that focuses on advancing research and fostering interdisciplinary dialogue on the psychological aspects of media use and effects.
+
+::: {.conference-awards}
+- *Top Paper Award (1st place)* at the 13th Conference of the Media Psychology Division of the German Psychological Society (DGPs) together with Rebekka Kreling, Alicia Gilbert, and Leonard Reinecke.
+:::
+
+```{=html}
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+```
+
+::: {#refs-mediapsych}
+:::
+
+```{=html}
+</details>
+```
+:::
+
+::: {.conference}
+::: {.entry-kicker}
+Media Use and Effects Division · German Communication Association (DGPuK)
+:::
+
+### Rezfo
+
+The Rezfo (Rezeptions- und Wirkungsforschung) Conference, organized by the Division for Media Use and Effects Research of the German Communication Association (DGPuK), serves as a forum to explore media use, processing, integration into everyday life, and effects, aiming to advance research, foster academic exchange, and support international collaboration and emerging scholars in this field.
+
+::: {.conference-awards}
+- *Top Paper Award (2nd place)* at the 2025 Conference of the Media Use and Effects Division of the German Communication Association (DGPuK) together with Alicia Ernst, Benedikt Rohr, Leonard Reinecke, and Michael Scharkow.
+- *Top Student Paper Award (1st place)* at the 2026 Conference of the Media Use and Effects Division of the German Communication Association (DGPuK).
+:::
+
+```{=html}
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+```
+
+::: {#refs-rezfo}
+:::
+
+```{=html}
+</details>
+```
+:::
+
+::: {.conference}
+::: {.entry-kicker}
+German Communication Association
+:::
+
+### DGPuK
+
+The main conference of the German Communication Association (DGPuK) is an annual event that brings together researchers and practitioners in communication studies to present and discuss the latest advancements across diverse areas of the field, fostering academic exchange, collaboration, and the promotion of communication science in research and practice.
+
+```{=html}
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+```
+
+::: {#refs-dgpuk}
+:::
+
+```{=html}
+</details>
+```
+:::
+
+::: {.conference}
+::: {.entry-kicker}
+Symposia, workshops, and other conferences
+:::
+
+### Other
+
+```{=html}
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+```
+
+::: {#refs-other}
+:::
+
+```{=html}
+</details>
+```
+:::

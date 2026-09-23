@@ -1,0 +1,33 @@
+<%
+// Resources listing (software, tutorials, ...). Fields per item in the yml:
+// type (small label), title, subtitle (one-line tagline), image, image-alt,
+// description (markdown) and links [{icon, text, href}].
+%>
+```{=html}
+<div class="list resource-list">
+```
+<% for (const item of items) { %>
+```{=html}
+<div class="resource" <%= metadataAttrs(item) %>>
+<% if (item.image) { %><div class="resource-image"><img src="<%- item.image %>" alt="<%= item['image-alt'] || item.title %>"></div><% } %>
+<div class="resource-body">
+<% if (item.type) { %><div class="entry-kicker"><%= item.type %></div><% } %>
+<h2 class="no-anchor resource-title"><%= item.title %></h2>
+<% if (item.subtitle) { %><div class="resource-subtitle"><%= item.subtitle %></div><% } %>
+<div class="resource-description">
+```
+
+<%= item.description %>
+
+```{=html}
+</div>
+<% if (item.links) { %><div class="resource-links">
+<% item.links.forEach((link) => { %><a href="<%- link.href %>" class="site-button"><% if (link.icon) { %><i class="bi bi-<%- link.icon %>"></i> <% } %><%= link.text %></a>
+<% }) %></div><% } %>
+</div>
+</div>
+```
+<% } %>
+```{=html}
+</div>
+```
