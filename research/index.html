@@ -27,7 +27,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-0bdc59fcf4c41de9ca6aa5cdff7392a7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-549029dbd67bf053b1dca51bffcc33a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-157bbb16a30f2da617729ac66dde6770.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-549029dbd67bf053b1dca51bffcc33a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4653c809d366ab10341325f98c9a0767.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-fbe92a824da7dd254abf79fdaf2b8e72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-4653c809d366ab10341325f98c9a0767.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -92,9 +112,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-date','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-date','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-lang","listing-website","listing-format","listing-theme","listing-execute","listing-engines","listing-language","listing-title","listing-subtitle","listing-description","listing-author","listing-date","listing-csl","listing-bibliography","listing-nocite","listing-about","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -341,6 +361,10 @@ window.Quarto = {
     <a class="nav-link" href="../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
@@ -396,14 +420,11 @@ window.Quarto = {
   </div>
 </div>
 
-<p>Please select a paper for open access versions of the manuscript, preregistrations, data, materials, and analysis code. A complete list of publications and preprints (work-in-progress) can be found <a href="../research/publications/index.html">here</a>. For conference presentations, see <a href="../research/presentations/index.html">here</a>.</p>
-<p><br></p>
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-pubs">
+<p>I study how people engage with entertainment media, and how that’s changing now that algorithms shape and personalize much of what we watch. My work uses data science approaches, often drawing on large-scale data and situational surveys of individual media use, to explore what we enjoy, what we take away from a media experience, and how this affects our mental health and wellbeing.</p>
+<section id="publications" class="level2">
+<h2 data-anchor-id="publications">Publications</h2>
+<p>Select a paper below for more information about my research projects, including open access versions of all manuscripts, as well as preregistrations, data, materials, and analysis code.</p>
+<div id="listing-pubs" class="quarto-listing quarto-listing-container-custom">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -413,14 +434,20 @@ window.Quarto = {
       <option value="listing-title" data-direction="asc">
         Title
       </option>
+      <option value="listing-subtitle" data-direction="asc">
+        Subtitle
+      </option>
+      <option value="listing-description" data-direction="asc">
+        Description
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
       <option value="listing-date-sort" data-direction="asc">
         Date - Oldest
       </option>
       <option value="listing-date-sort" data-direction="desc">
         Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
       </option>
     </select>
   </div>
@@ -429,217 +456,347 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1785024000000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/26_cr_dietrichetal_pub.html" class="no-external">Music was my first love</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/26_cr_dietrichetal_pub.html" class="no-external">Biographic resonance makes everyday music listening meaningful</a>
+<div class="list entry-list" data-group-years="">
+
+<div class="entry" data-index="0" data-listing-date-sort="1789084800000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
+<a href="../research/publications/26_publizistik_possleretal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2026</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Publizistik</div>
+<h3 class="no-anchor entry-title listing-title">Gebrauchsfertige, Open Source Large Language Models auf Hugging Face</h3>
+<div class="entry-subtitle listing-subtitle">als Forschungsinfrastruktur für die standardisierte Inhaltsanalyse von Texten</div>
+<div class="entry-meta listing-author">Daniel Possler, Felix Dietrich, Jule Scheper, Anica Lammers, Anna Spatzenegger</div>
 </div>
-<div class="delink listing-description"><a href="../research/publications/26_cr_dietrichetal_pub.html" class="no-external">
-<p>Communication Research</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/26_cr_dietrichetal_pub.html" class="no-external">
-<div class="listing-date">
-Jul 26, 2026
-</div>
-<div class="listing-author">
-Felix Dietrich, Alicia Ernst, Benedikt Rohr, Michael Scharkow, Leonard Reinecke
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="1" data-listing-date-sort="1785024000000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
+<a href="../research/publications/26_cr_dietrichetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2026</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Communication Research</div>
+<h3 class="no-anchor entry-title listing-title">Music was my first love</h3>
+<div class="entry-subtitle listing-subtitle">Biographic resonance makes everyday music listening meaningful</div>
+<div class="entry-meta listing-author">Felix Dietrich, Alicia Ernst, Benedikt Rohr, Michael Scharkow, Leonard Reinecke</div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1769472000000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/26_hcr_ernstetal_pub.html" class="no-external">Revisiting the digital jukebox in daily life</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/26_hcr_ernstetal_pub.html" class="no-external">Applying Mood Management Theory to algorithmically curated music streaming environments</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/26_hcr_ernstetal_pub.html" class="no-external">
-<p>Human Communication Research</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/26_hcr_ernstetal_pub.html" class="no-external">
-<div class="listing-date">
-Jan 27, 2026
-</div>
-<div class="listing-author">
-Alicia Ernst, Felix Dietrich, Benedikt Rohr, Leonard Reinecke, Michael Scharkow
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="2" data-listing-date-sort="1769472000000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<a href="../research/publications/26_hcr_ernstetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2026</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Human Communication Research</div>
+<h3 class="no-anchor entry-title listing-title">Revisiting the digital jukebox in daily life</h3>
+<div class="entry-subtitle listing-subtitle">Applying Mood Management Theory to algorithmically curated music streaming environments</div>
+<div class="entry-meta listing-author">Alicia Ernst, Felix Dietrich, Benedikt Rohr, Leonard Reinecke, Michael Scharkow</div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1758585600000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/25_chigreece_gilbertetal_pub.html" class="no-external">101 reasons to stop</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/25_chigreece_gilbertetal_pub.html" class="no-external">A systematic review of media cues for disengagement</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/25_chigreece_gilbertetal_pub.html" class="no-external">
-<p>Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/25_chigreece_gilbertetal_pub.html" class="no-external">
-<div class="listing-date">
-Sep 23, 2025
-</div>
-<div class="listing-author">
-Alicia Gilbert, Frauke Schöne, Rebekka Kreling, Felix Dietrich, Leonard Reinecke
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="3" data-listing-date-sort="1758585600000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
+<a href="../research/publications/25_chigreece_gilbertetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2025</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter</div>
+<h3 class="no-anchor entry-title listing-title">101 reasons to stop</h3>
+<div class="entry-subtitle listing-subtitle">A systematic review of media cues for disengagement</div>
+<div class="entry-meta listing-author">Alicia Gilbert, Frauke Schöne, Rebekka Kreling, Felix Dietrich, Leonard Reinecke</div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1758585600000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/25_chigreece_dietrichetal_pub.html" class="no-external">The differential effects of algorithmic recommendations on user experience</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/25_chigreece_dietrichetal_pub.html" class="no-external">Enjoyment and serendipity in everyday music streaming</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/25_chigreece_dietrichetal_pub.html" class="no-external">
-<p>Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/25_chigreece_dietrichetal_pub.html" class="no-external">
-<div class="listing-date">
-Sep 23, 2025
-</div>
-<div class="listing-author">
-Felix Dietrich, Alicia Ernst, Rebekka Kreling, Alicia Gilbert, Benedikt Rohr, Michael Scharkow, Leonard Reinecke
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="4" data-listing-date-sort="1758585600000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301">
+<a href="../research/publications/25_chigreece_dietrichetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2025</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter</div>
+<h3 class="no-anchor entry-title listing-title">The differential effects of algorithmic recommendations on user experience</h3>
+<div class="entry-subtitle listing-subtitle">Enjoyment and serendipity in everyday music streaming</div>
+<div class="entry-meta listing-author">Felix Dietrich, Alicia Ernst, Rebekka Kreling, Alicia Gilbert, Benedikt Rohr, Michael Scharkow, Leonard Reinecke</div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/25_hcr_krelingetal_pub.html" class="no-external">What do people watch under adversity?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/25_hcr_krelingetal_pub.html" class="no-external">Testing interactions of semantic affinity and coping style using Netflix data donations</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/25_hcr_krelingetal_pub.html" class="no-external">
-<p>Human Communication Research</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/25_hcr_krelingetal_pub.html" class="no-external">
-<div class="listing-date">
-Sep 2, 2025
-</div>
-<div class="listing-author">
-Rebekka Kreling, Felix Dietrich, Alicia Gilbert, Leonard Reinecke
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="5" data-listing-date-sort="1756771200000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
+<a href="../research/publications/25_hcr_krelingetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2025</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Human Communication Research</div>
+<h3 class="no-anchor entry-title listing-title">What do people watch under adversity?</h3>
+<div class="entry-subtitle listing-subtitle">Testing interactions of semantic affinity and coping style using Netflix data donations</div>
+<div class="entry-meta listing-author">Rebekka Kreling, Felix Dietrich, Alicia Gilbert, Leonard Reinecke</div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1731456000000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/24_iwc_dietrichetal_pub.html" class="no-external">What constitutes experiences of autonomy in digital technology use?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/24_iwc_dietrichetal_pub.html" class="no-external">A (computational) scoping review through the lens of self-determination theory</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/24_iwc_dietrichetal_pub.html" class="no-external">
-<p>Interacting with Computers</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/24_iwc_dietrichetal_pub.html" class="no-external">
-<div class="listing-date">
-Nov 13, 2024
-</div>
-<div class="listing-author">
-Felix Dietrich, Anisha Arenz, Leonard Reinecke
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="6" data-listing-date-sort="1731456000000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
+<a href="../research/publications/24_iwc_dietrichetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2024</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Interacting with Computers</div>
+<h3 class="no-anchor entry-title listing-title">What constitutes experiences of autonomy in digital technology use?</h3>
+<div class="entry-subtitle listing-subtitle">A (computational) scoping review through the lens of self-determination theory</div>
+<div class="entry-meta listing-author">Felix Dietrich, Anisha Arenz, Leonard Reinecke</div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1719446400000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/24_joc_gilbertetal_pub.html" class="no-external">Too amused to stop?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/24_joc_gilbertetal_pub.html" class="no-external">Self-control and the disengagement process on Netflix</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/24_joc_gilbertetal_pub.html" class="no-external">
-<p>Journal of Communication</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/24_joc_gilbertetal_pub.html" class="no-external">
-<div class="listing-date">
-Jun 27, 2024
-</div>
-<div class="listing-author">
-Alicia Gilbert, Leonard Reinecke, Adrian Meier, Susanne Baumgartner, Felix Dietrich
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="7" data-listing-date-sort="1719446400000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
+<a href="../research/publications/24_joc_gilbertetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2024</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Journal of Communication</div>
+<h3 class="no-anchor entry-title listing-title">Too amused to stop?</h3>
+<div class="entry-subtitle listing-subtitle">Self-control and the disengagement process on Netflix</div>
+<div class="entry-meta listing-author">Alicia Gilbert, Leonard Reinecke, Adrian Meier, Susanne Baumgartner, Felix Dietrich</div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/23_mep_dietrichetal_pub.html" class="no-external">Surprised–curious–confused, empathetic, and entertained?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/23_mep_dietrichetal_pub.html" class="no-external">The role of epistemic emotions and empathy in eudaimonic entertainment experiences and political news processing</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/23_mep_dietrichetal_pub.html" class="no-external">
-<p>Media Psychology</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/23_mep_dietrichetal_pub.html" class="no-external">
-<div class="listing-date">
-Jul 18, 2023
-</div>
-<div class="listing-author">
-Felix Dietrich, Tanja Kugler, Sarah Hennings, Celine Conrad, Frank M. Schneider, Peter Vorderer
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="8" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
+<a href="../research/publications/23_mep_dietrichetal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2023</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Media Psychology</div>
+<h3 class="no-anchor entry-title listing-title">Surprised–curious–confused, empathetic, and entertained?</h3>
+<div class="entry-subtitle listing-subtitle">The role of epistemic emotions and empathy in eudaimonic entertainment experiences and political news processing</div>
+<div class="entry-meta listing-author">Felix Dietrich, Tanja Kugler, Sarah Hennings, Celine Conrad, Frank M. Schneider, Peter Vorderer</div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1597276800000" data-listing-file-modified-sort="1785242347461" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="188">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/publications/20_mac_schneideretal_pub.html" class="no-external">What is important when we evaluate movies?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/publications/20_mac_schneideretal_pub.html" class="no-external">Insights from computational analysis of online reviews</a>
-</div>
-<div class="delink listing-description"><a href="../research/publications/20_mac_schneideretal_pub.html" class="no-external">
-<p>Media and Communication</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/publications/20_mac_schneideretal_pub.html" class="no-external">
-<div class="listing-date">
-Aug 13, 2020
-</div>
-<div class="listing-author">
-Frank M. Schneider, Emese Domahidi, Felix Dietrich
-</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
 </a>
 </div>
+
+<div class="entry" data-index="9" data-listing-date-sort="1597276800000" data-listing-file-modified-sort="1790177415601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="188">
+<a href="../research/publications/20_mac_schneideretal_pub.html" class="entry-row entry-link no-external">
+<div class="entry-year listing-date">2020</div>
+<div class="entry-body">
+<div class="entry-kicker listing-description">Media and Communication</div>
+<h3 class="no-anchor entry-title listing-title">What is important when we evaluate movies?</h3>
+<div class="entry-subtitle listing-subtitle">Insights from computational analysis of online reviews</div>
+<div class="entry-meta listing-author">Frank M. Schneider, Emese Domahidi, Felix Dietrich</div>
 </div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+</a>
+</div>
+
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="conference-presentations" class="level2">
+<h2 data-anchor-id="conference-presentations">Conference Presentations</h2>
+<div class="conference">
+<div class="entry-kicker">
+<p>International Communication Association</p>
+</div>
+<section id="ica" class="level3">
+<h3 data-anchor-id="ica">ICA</h3>
+<p>The International Communication Association (ICA) is a global academic association dedicated to advancing the study, teaching, and application of communication through scholarly research, collaboration, and dissemination.</p>
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+<div id="refs-ica" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dietrichMeasuringDevelopmentParasocial2026" class="csl-entry" role="listitem">
+Dietrich, F. (2026, June 4–8). <em>Measuring the development of parasocial engagement: <span>A</span> longitudinal computational analysis</em> [Conference Presentation]. 76th <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Cape Town, South Africa.
+</div>
+<div id="ref-dietrichMusicWasMy2024" class="csl-entry" role="listitem">
+Dietrich, F., Ernst, A., Rohr, B., Scharkow, M., &amp; Reinecke, L. (2024, June 20–24). <em>Music was my first love: <span>An</span> experience sampling study of biographic resonance through algorithmically curated music listening</em> [Conference Presentation]. 74th <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Gold Coast, Australia.
+</div>
+<div id="ref-ernstAgencySerendipityKey2024" class="csl-entry" role="listitem">
+Ernst, A., &amp; Dietrich, F. (2024, June 20–24). <em>Agency and serendipity as key concepts for algorithmically curated digital media use in everyday life</em> [Conference Presentation]. 74th <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Gold Coast, Australia.
+</div>
+<div id="ref-dietrichCantGetNo2023" class="csl-entry" role="listitem">
+Dietrich, F., Ernst, A., Rohr, B., Reinecke, L., &amp; Scharkow, M. (2023, May 25–29). <em>(<span>I</span> can’t get no) satisfaction: Music listeners’ algorithmically curated entertainment experience</em> [Conference Presentation]. 73rd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Toronto, Canada.
+</div>
+<div id="ref-dietrichWhyAreWe2023" class="csl-entry" role="listitem">
+Dietrich, F., Hennings, S., &amp; Vorderer, P. (2023, May 25–29). <em>Why are we attracted to true crime? <span>The</span> role of epistemic emotions and entertainment experiences</em> [Conference Presentation]. 73rd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Toronto, Canada.
+</div>
+<div id="ref-dietrichWhatConstitutesAutonomy2023" class="csl-entry" role="listitem">
+Dietrich, F., &amp; Reinecke, L. (2023, May 25–29). <em>What constitutes autonomy in digital communication? <span>A</span> computational scoping review of digital autonomy</em> [Conference Presentation]. 73rd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Toronto, Canada.
+</div>
+<div id="ref-ernstDigitalJukeboxRevisited2023" class="csl-entry" role="listitem">
+Ernst, A., Dietrich, F., Rohr, B., &amp; Scharkow, M. (2023, May 25–29). <em>The digital jukebox revisited: Applying mood management theory to algorithmically curated music streaming environments</em> [Conference Presentation]. 73rd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Toronto, Canada.
+</div>
+<div id="ref-gilbertTimeWellspentGuilty2023" class="csl-entry" role="listitem">
+Gilbert, A., Reinecke, L., Meier, A., Baumgartner, S. E., Kühne, R., &amp; Dietrich, F. (2023, May 25–29). <em>Time well-spent or guilty pleasure? <span>The</span> effects of self-control on content selection and entertainment experience on <span>Netflix</span></em> [Conference Presentation]. 73rd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Toronto, Canada.
+</div>
+<div id="ref-dietrichRoleEpistemicEmotions2022a" class="csl-entry" role="listitem">
+Dietrich, F., Kugler, T., Hennings, S., Conrad, C., Schneider, F. M., &amp; Vorderer, P. (2022, May 26–30). <em>The role of epistemic emotions and empathy in eudaimonic entertainment experiences and political news processing</em> [Conference Presentation]. 72nd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Paris, France.
+</div>
+<div id="ref-dietrichRoleEpistemicEmotions2022" class="csl-entry" role="listitem">
+Dietrich, F., &amp; Vorderer, P. (2022, May 26–30). <em>The role of epistemic emotions in the processing of cross-cutting news exposure</em> [Conference Presentation]. 72nd <span>Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Paris, France.
+</div>
+<div id="ref-vordererHedonicEudaimonicInnovations2019" class="csl-entry" role="listitem">
+Vorderer, P., &amp; Dietrich, F. (2019, May 24–28). <em>Hedonic, eudaimonic, and beyond: <span>Innovations</span> in entertainment theory</em> [Symposium]. 69th <span>Annual Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Washington, D.C., USA.
+</div>
+<div id="ref-halfmannWhoDeterminesYour2018" class="csl-entry" role="listitem">
+Halfmann, A., Vorderer, P., Dietrich, F., &amp; Lutz, S. (2018, May 24–28). <em>Who determines your mobile communication? <span>The</span> effects of social pressure on self-control, need satisfaction, well-being, and perceived stress</em> [Conference Presentation]. 68th <span>Annual Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Prague, Czech Republic.
+</div>
+<div id="ref-schmittPopulistVoicesExtremist2018" class="csl-entry" role="listitem">
+Schmitt, J., Winkler, J., Lutz, S., Dietrich, F., &amp; Rieger, D. (2018, May 24–28). <em>Populist voices in extremist online videos: <span>A</span> content analysis of right-wing and <span>Islamic</span> extremist <span>YouTube</span> videos</em> [Conference Presentation]. 68th <span>Annual Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Prague, Czech Republic.
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="conference">
+<div class="entry-kicker">
+<p>Media Psychology Division · German Psychological Society (DGPs)</p>
+</div>
+<section id="mediapsych" class="level3">
+<h3 data-anchor-id="mediapsych">MediaPsych</h3>
+<p>The MediaPsych Conference, organized by the Media Psychology Division of the German Psychological Society (DGPs), is a biennial event that focuses on advancing research and fostering interdisciplinary dialogue on the psychological aspects of media use and effects.</p>
+<div class="conference-awards">
+<ul>
+<li><em>Top Paper Award (1st place)</em> at the 13th Conference of the Media Psychology Division of the German Psychological Society (DGPs) together with Rebekka Kreling, Alicia Gilbert, and Leonard Reinecke.</li>
+</ul>
+</div>
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+<div id="refs-mediapsych" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dietrichMeasuringDevelopmentParasocial2025" class="csl-entry" role="listitem">
+Dietrich, F. (2025, September 10–12). <em>Measuring the development of parasocial engagement: <span>A</span> computational approach</em> [Conference Presentation]. 14th <span>Conference</span> of the <span>Media Psychology Division</span> of the <span>German Psychological Society</span> (<span>DGPs</span>), Duisburg, Germany.
+</div>
+<div id="ref-ernstDoesMoodDrive2025" class="csl-entry" role="listitem">
+Ernst, A., Schwertberger, U., Dietrich, F., &amp; Greipl, S. (2025, September 10–12). <em>Does mood drive media multitasking in daily life? <span>Evidence</span> from two digital entertainment contexts</em> [Conference Presentation]. 14th <span>Conference</span> of the <span>Media Psychology Division</span> of the <span>German Psychological Society</span> (<span>DGPs</span>), Duisburg, Germany.
+</div>
+<div id="ref-dietrichDigitalEmotionContagion2023" class="csl-entry" role="listitem">
+Dietrich, F., Possler, D., &amp; Dale, K. R. (2023, September 6–8). <em>Digital emotion contagion in online environments: An automated content analysis of comments from self-transcendent <span>YouTube</span> videos</em> [Conference Presentation]. 13th <span>Conference</span> of the <span>Media Psychology Division</span> of the <span>German Psychological Society</span> (<span>DGPs</span>), Luxembourg.
+</div>
+<div id="ref-krelingWhatPeopleWatch2023" class="csl-entry" role="listitem">
+Kreling, R., Dietrich, F., Gilbert, A., &amp; Reinecke, L. (2023, September 6–8). <em>What do people watch under adversity? <span>Testing</span> interactions of semantic affinity and coping style using <span>Netflix</span> data donations</em> [Conference Presentation]. 13th <span>Conference</span> of the <span>Media Psychology Division</span> of the <span>German Psychological Society</span> (<span>DGPs</span>), Luxembourg.
+</div>
+<div id="ref-dietrichAllJustClickbait2021" class="csl-entry" role="listitem">
+Dietrich, F., Kugler, T., Hennings, S., Conrad, C., Schneider, F. M., &amp; Vorderer, P. (2021, September 8–10). <em>All just clickbait? <span>The</span> effect of empathy and epistemic emotions in online news on the eudaimonic entertainment experience and political information processing</em> [Conference Presentation]. 12th <span>Conference</span> of the <span>Media Psychology Division</span> of the <span>German Psychological Society</span> (<span>DGPs</span>), Aachen, Germany.
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="conference">
+<div class="entry-kicker">
+<p>Media Use and Effects Division · German Communication Association (DGPuK)</p>
+</div>
+<section id="rezfo" class="level3">
+<h3 data-anchor-id="rezfo">Rezfo</h3>
+<p>The Rezfo (Rezeptions- und Wirkungsforschung) Conference, organized by the Division for Media Use and Effects Research of the German Communication Association (DGPuK), serves as a forum to explore media use, processing, integration into everyday life, and effects, aiming to advance research, foster academic exchange, and support international collaboration and emerging scholars in this field.</p>
+<div class="conference-awards">
+<ul>
+<li><em>Top Paper Award (2nd place)</em> at the 2025 Conference of the Media Use and Effects Division of the German Communication Association (DGPuK) together with Alicia Ernst, Benedikt Rohr, Leonard Reinecke, and Michael Scharkow.</li>
+<li><em>Top Student Paper Award (1st place)</em> at the 2026 Conference of the Media Use and Effects Division of the German Communication Association (DGPuK).</li>
+</ul>
+</div>
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+<div id="refs-rezfo" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dietrichWieVielSelbst2026" class="csl-entry" role="listitem">
+Dietrich, F. (2026, January 21–23). <em>Wie viel <span>Selbst</span> braucht die <span>Selbstregulation</span>? <span>Temporäre Selbsterweiterung</span> durch algorithmisch kuratierte <span>Unterhaltungsmediennutzung</span> im <span>Alltag</span> [<span>How</span> much self does self-regulation require? <span>Temporary</span> self-expansion through algorithmically curated entertainment media use in everyday life]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>Media Use</span> and <span>Effects Division</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Klagenfurt, Austria.
+</div>
+<div id="ref-ernstExperienceSamplingStudieZur2025" class="csl-entry" role="listitem">
+Ernst, A., Dietrich, F., Rohr, B., Reinecke, L., &amp; Scharkow, M. (2025, January 22–24). <em>Eine <span>Experience Sampling-Studie</span> zur alltäglichen <span>Stimmungsregulierung</span> in algorithmisch kuratierten <span>Musikstreamingumgebungen</span> [<span>An</span> experience sampling study on everyday mood regulation in algorithmically curated music streaming environments]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>Media Use</span> and <span>Effects Division</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Bamberg, Germany.
+</div>
+<div id="ref-ernstZeitlicheStrukturenDigitaler2024" class="csl-entry" role="listitem">
+Ernst, A., Dietrich, F., Schnauber-Stockmann, A., Gilbert, A., &amp; Scharkow, M. (2024, January 24–26). <em>Zeitliche <span>Strukturen</span> digitaler <span>Unterhaltungsmediennutzung</span>: <span>Eine</span> explorative <span>Analyse</span> digitaler <span>Verhaltensdaten</span> [<span>Temporal</span> structures of digital entertainment media use: <span>An</span> exploratory analysis of digital trace data]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>Media Use</span> and <span>Effects Division</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Fribourg, Switzerland.
+</div>
+<div id="ref-gilbertTooAmusedStop2023" class="csl-entry" role="listitem">
+Gilbert, A., Reinecke, L., Meier, A., Baumgartner, S. E., Kühne, R., &amp; Dietrich, F. (2023, January 19–21). <em>Too amused to stop? <span>Selbstkontrolle</span> und <span>Unterhaltungserleben</span> bei der <span>Netflix-Nutzung</span> [<span>Too</span> amused to stop? <span class="nocase">Self-control</span> and entertainment experiences while using <span>Netflix</span>]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>Media Use</span> and <span>Effects Division</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Augsburg, Germany.
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="conference">
+<div class="entry-kicker">
+<p>German Communication Association</p>
+</div>
+<section id="dgpuk" class="level3">
+<h3 data-anchor-id="dgpuk">DGPuK</h3>
+<p>The main conference of the German Communication Association (DGPuK) is an annual event that brings together researchers and practitioners in communication studies to present and discuss the latest advancements across diverse areas of the field, fostering academic exchange, collaboration, and the promotion of communication science in research and practice.</p>
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+<div id="refs-dgpuk" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-dietrichOpenSourceTransformer2024" class="csl-entry" role="listitem">
+Dietrich, F., Possler, D., Lammers, A., &amp; Scheper, J. (2024, March 13–15). <em>Open <span>Source Transformer Modelle</span>: <span>Ein</span> einfaches <span>Werkzeug</span> zur automatisierten <span>Inhaltsanalyse</span> für die (deutschsprachige) <span>Kommunikationswissenschaft</span> [<span>Open Source Transformer Models</span>: <span>A</span> simple tool for automated content analysis for (<span class="nocase">German-speaking</span>) communication science]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Erfurt, Germany.
+</div>
+</div>
+</details>
+</section>
+</div>
+<div class="conference">
+<div class="entry-kicker">
+<p>Symposia, workshops, and other conferences</p>
+</div>
+<section id="other" class="level3">
+<h3 data-anchor-id="other">Other</h3>
+<details class="conference-refs"><summary class="site-button"><i class="bi bi-chevron-down"></i><span><span class="when-closed">Show</span><span class="when-open">Hide</span> <span class="conference-count">presentations</span></span></summary>
+<div id="refs-other" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-rohrOpportunitiesChallengesRealtime2023" class="csl-entry" role="listitem">
+Rohr, B., Ernst, A., Dietrich, F., &amp; Scharkow, M. (2023, July 17–21). <em>Opportunities and challenges of real-time data linkage designs: A case study using the <span>Spotify API</span></em> [Conference Presentation]. 10th <span>Conference</span> of the <span>European Survey Research Association</span> (<span>ESRA</span>), Milan, Italy.
+</div>
+<div id="ref-dietrichAlgorithmicallyCuratedMedia2023" class="csl-entry" role="listitem">
+Dietrich, F. (2023, October 5–7). <em>Algorithmically curated media entertainment: Insights and open questions for the field of positive media psychology</em> [Conference Presentation]. Positive <span>Media Psychology Symposium</span>, Orange, California, USA.
+</div>
+<div id="ref-dietrichUsingLargeLanguage2023" class="csl-entry" role="listitem">
+Dietrich, F. (2023, December 7). <em>Using large language models in media psychology</em> [Conference Presentation]. Digital <span>Methods Colloquium</span> at the <span>Weizenbaum Institute</span>, Berlin, Germany.
+</div>
+<div id="ref-dietrichSocialMediaAffordances2022" class="csl-entry" role="listitem">
+Dietrich, F., &amp; Reinecke, L. (2022). Social media affordances and well-being: An integration with <span class="nocase">HCI-research</span>. In N. Ballou, S. Deterding, A. Tyack, E. D. Mekler, R. A. Calvo, D. Peters, G. Villalobos-Zúñiga, &amp; S. Turkay (Eds.), <em>Self-determination theory in <span>HCI</span>: Shaping a research agenda [<span>Workshop</span> presentation at the <span>CHI Conference</span> on <span>Human Factors</span> in <span>Computing Systems</span>]</em>. <a href="https://www.positivecomputing.org/blog/chi-2022-workshop">https://www.positivecomputing.org/blog/chi-2022-workshop</a>
+</div>
+</div>
+</details>
+</section>
+</div>
+
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+// Site-wide scripts (included on every page via _quarto.yml).
+
+// Listings marked with data-group-years (see _listings/) show the year only
+// on the first entry of each year, and draw a timeline through the entries
+// of the same year. Re-applied after every List.js update, so it follows
+// whatever sort / filter / page is currently visible.
+//   year-repeat:    same year as the entry before (year label hidden)
+//   year-continues: same year as the entry after (timeline runs on)
+window.addEventListener("DOMContentLoaded", () => {
+  const groupYears = (container) => {
+    const entries = [...container.querySelectorAll(":scope > .entry")];
+    const years = entries.map((entry) =>
+      entry.querySelector(".entry-year")?.textContent.trim());
+    entries.forEach((entry, i) => {
+      const year = years[i];
+      entry.classList.toggle("year-repeat", !!year && year === years[i - 1]);
+      entry.classList.toggle("year-continues", !!year && year === years[i + 1]);
+    });
+  };
+  for (const list of Object.values(window["quarto-listings"] || {})) {
+    const container = list.list;
+    if (!container || !container.hasAttribute("data-group-years")) continue;
+    list.on("updated", () => groupYears(container));
+    groupYears(container);
+  }
+});
+
+// Conference presentations (research page): "Show 13 presentations", counted
+// from the rendered list (without JS the button just says "Show presentations").
+window.addEventListener("DOMContentLoaded", () => {
+  for (const details of document.querySelectorAll("details.conference-refs")) {
+    const count = details.querySelectorAll(".csl-entry").length;
+    const label = details.querySelector(".conference-count");
+    if (label && count) {
+      label.textContent = `${count} presentation${count === 1 ? "" : "s"}`;
+    }
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
