@@ -1,0 +1,887 @@
+/*-- scss:rules --*/
+// Shared components: type scale, buttons, listing entries (_listings/) and
+// resources. Loaded after light.scss / dark.scss, so the theme colours apply.
+
+/*type: Aleo only, using its variable weight axis (100-900)*/
+// Aleo 2.0 is self-hosted from styles/fonts/ (SIL Open Font License, see
+// OFL.txt there): no requests to Google, and every weight in between is
+// available, which also lets weights animate smoothly.
+/* latin-ext, italic */
+@font-face {
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("styles/fonts/aleo-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin, italic */
+@font-face {
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("styles/fonts/aleo-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext, normal */
+@font-face {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("styles/fonts/aleo-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin, normal */
+@font-face {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("styles/fonts/aleo-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// Every component takes its size and weight from these scales.
+$fs-label: .72rem;     // labels in capitals: venue, semester, resource type
+$fs-small: .85rem;     // interface text (buttons, controls), meta text
+$fs-body: 1rem;        // body text, subtitles
+$fs-title: 1.125rem;   // titles in listing rows
+$fs-title-lg: 1.375rem; // resource titles
+$fs-year: 1.25rem;     // timeline years
+$mobile-year-space: 2.75rem; // room above a box for the year on phones
+$mobile-year-gap: 1.15rem;   // white space above the year itself
+
+$fw-thin: 300;         // timeline years at rest
+$fw-light: 300;        // small print: footer
+$fw-meta: 350;         // author lines
+$fw-regular: 400;      // body text
+$fw-ui: 500;           // buttons and controls
+$fw-strong: 650;       // titles, labels, h2
+$fw-heavy: 800;        // page titles
+
+@mixin ui($size: $fs-small, $weight: $fw-ui) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// headings and title-block subtitles across the site
+h1, .h1 {
+  font-weight: $fw-heavy;
+}
+
+h2, .h2 {
+  font-weight: $fw-strong;
+}
+
+.subtitle, p.subtitle {
+  font-weight: $fw-regular;
+}
+
+$listing-radius: 7px;
+
+// Listing rows, buttons and resource entries are grey boxes; linked rows and
+// buttons draw the offset yellow frame (as around the start page portrait) on
+// hover.
+$entry-frame-offset: 6px;
+$entry-frame-width: 1.5px;
+$frame-ease: cubic-bezier(.2, .7, .2, 1);
+$entry-fill: mix($grey, $body-bg, 10%);
+
+// shared little label above titles (venue, semester, resource type)
+@mixin listing-kicker {
+  @include ui($fs-label, $fw-strong);
+  line-height: 1.4;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+// The start page portrait frame as a hover effect (see .fd in light.scss):
+// two L-shaped lines, top-left and bottom-right, each with a rounded corner.
+// On hover each L grows out of its corner and slides $offset inwards
+// diagonally, so the lines sit inside the element and cross just past it.
+// frame-base: the (hidden) lines; frame-on: the drawn state, for whichever
+// states should show it (hover, focus, the current page, ...)
+@mixin frame-base($width, $radius) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    border: 0 solid $yellow;
+    transition: width .4s $frame-ease, height .4s $frame-ease,
+      transform .4s $frame-ease, opacity .15s;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top-width: $width;
+    border-left-width: $width;
+    border-top-left-radius: $radius;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    border-bottom-width: $width;
+    border-right-width: $width;
+    border-bottom-right-radius: $radius;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before,
+    &::after {
+      transition: opacity .15s;
+    }
+  }
+}
+
+@mixin frame-on($offset) {
+  outline: none;
+
+  &::before,
+  &::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  &::before {
+    transform: translate($offset, $offset);
+  }
+
+  &::after {
+    transform: translate(-$offset, -$offset);
+  }
+}
+
+@mixin offset-frame($offset, $width, $radius) {
+  @include frame-base($width, $radius);
+
+  &:hover,
+  &:focus-visible {
+    @include frame-on($offset);
+  }
+}
+
+// the small version used by buttons and listing controls
+$button-offset: 3px;
+$button-radius: 5px;
+$button-pad-x: 1.05rem;
+$hero-button-pad-x: 1.1rem;
+$button-fill: $entry-fill;
+
+/*link underlines: a yellow line instead of text-decoration*/
+// Drawn as a background line so it can animate like the frame lines.
+$link-line: 2px;
+$link-line-hover: 3px;
+
+@mixin line-underline($size: 100%) {
+  text-decoration: none !important;
+  background-image: linear-gradient($yellow, $yellow);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: $size $link-line;
+}
+
+// hover: the line quickly grows thicker into a highlight
+.content a {
+  @include line-underline;
+  transition: background-size .15s $frame-ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $body-color !important;
+    background-size: 100% $link-line-hover;
+  }
+}
+
+// links that are styled as something else: no underline
+// (buttons and page numbers reset or restyle it themselves)
+.content a.entry-row,
+.content a.anchorjs-link,
+.content a:has(> img) {
+  background-image: none;
+}
+
+// navbar: the current page keeps its line, other items draw it on hover
+.navbar-nav .nav-link .menu-text {
+  @include line-underline(0);
+  transition: background-size .35s $frame-ease;
+}
+
+.navbar-nav .nav-link:hover .menu-text,
+.navbar-nav .nav-link:focus-visible .menu-text,
+.navbar-nav .nav-link.active .menu-text {
+  background-size: 100% $link-line;
+}
+
+.navbar-nav .nav-link.active:hover .menu-text,
+.navbar-nav .nav-link.active:focus-visible .menu-text {
+  background-size: 100% $link-line-hover;
+}
+
+/*entries: shared by publications and teaching*/
+.entry-list {
+  margin-top: 1rem;
+}
+
+// consecutive entries from the same year: hide the repeated year
+// (toggled by styles/scripts.html)
+.entry.year-repeat .entry-year {
+  color: transparent;
+}
+
+// small gaps between the boxes, more air where a new year starts
+.entry:not(:first-child) {
+  margin-top: .6rem;
+}
+
+[data-group-years] > .entry:not(.year-repeat):not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.content .entry-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem 1.25rem;
+  border-radius: $listing-radius;
+  background-color: $entry-fill;
+  color: $body-color;
+}
+
+// listings without the year column (template-params show-year: false)
+.entry-list.no-year .entry-row {
+  grid-template-columns: 1fr auto;
+}
+
+.content a.entry-link {
+  @include offset-frame($entry-frame-offset, $entry-frame-width, $listing-radius);
+}
+
+// large, thin numerals; the row's year turns bold on hover (the variable
+// font interpolates, and the fixed-width column keeps the layout still)
+.entry-year {
+  @include ui($fs-year, $fw-thin);
+  line-height: 1.2;
+  color: $grey;
+  transition: font-weight .35s $frame-ease, color .35s;
+}
+
+.entry-link:hover .entry-year,
+.entry-link:focus-visible .entry-year {
+  font-weight: $fw-strong;
+  color: $body-color;
+}
+
+.entry.year-repeat .entry-link:hover .entry-year {
+  color: transparent;
+}
+
+/*timeline: a dotted line in the year column through the entries of a year*/
+// Each entry draws its own piece in its year cell (stretched to the row
+// height): down through its bottom padding and the gap to the next box
+// ($timeline-out), and in a following entry up through its own top padding
+// ($timeline-in). A following box would paint over a piece reaching into it,
+// hence the split. Further entries get a dot (grey, like the year), centred
+// in their box;
+// the line ends at the last dot.
+$timeline-out: 1.1rem + .6rem;
+$timeline-in: 1.1rem;
+
+[data-group-years] .entry-year {
+  position: relative;
+  align-self: stretch;
+  text-align: center;
+}
+
+[data-group-years] .entry.year-continues .entry-year::before,
+[data-group-years] .entry.year-repeat .entry-year::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background-image: radial-gradient(circle, $grey .9px, transparent 1.1px);
+  background-size: 2px 5px;
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+// first entry of a year: from below the year label on
+[data-group-years] .entry.year-continues:not(.year-repeat) .entry-year::before {
+  top: 2rem;
+  bottom: -$timeline-out;
+}
+
+// middle entries: all the way through
+[data-group-years] .entry.year-repeat.year-continues .entry-year::before {
+  top: -$timeline-in;
+  bottom: -$timeline-out;
+}
+
+// last entry of a year: down to its dot
+[data-group-years] .entry.year-repeat:not(.year-continues) .entry-year::before {
+  top: -$timeline-in;
+  height: calc(#{$timeline-in} + 50%);
+}
+
+// dots behave like the years: grey at rest, darker (and very slightly
+// bigger) when their row is hovered
+[data-group-years] .entry.year-repeat .entry-year::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: $grey;
+  transform: translate(-50%, -50%);
+  transition: width .35s $frame-ease, height .35s $frame-ease,
+    background-color .35s;
+}
+
+[data-group-years] .entry.year-repeat .entry-link:hover .entry-year::after,
+[data-group-years] .entry.year-repeat .entry-link:focus-visible .entry-year::after {
+  width: 8px;
+  height: 8px;
+  background-color: $body-color;
+}
+
+.entry-kicker {
+  @include listing-kicker;
+  margin-bottom: .15rem;
+}
+
+.entry-title {
+  font-size: $fs-title;
+  font-weight: $fw-strong;
+  line-height: 1.35;
+  margin: .1rem 0 0;
+}
+
+.entry-subtitle {
+  font-size: $fs-body;
+  margin-top: .15rem;
+}
+
+.entry-meta {
+  font-size: $fs-small;
+  font-weight: $fw-meta;
+  margin-top: .5rem;
+  color: $grey;
+}
+
+.entry-arrow {
+  min-width: 1.5rem;
+  line-height: 1.4;
+  color: $grey;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .2s, transform .2s;
+}
+
+// always visible, labelled link hint (e.g. "Course website")
+.entry-arrow.is-persistent {
+  @include ui($fs-small);
+  opacity: 1;
+  transform: none;
+  white-space: nowrap;
+}
+
+.entry-arrow.is-persistent .bi {
+  display: inline-block;
+  transition: transform .2s;
+}
+
+.entry-link:hover .entry-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: $body-color;
+}
+
+.entry-link:hover .entry-arrow.is-persistent {
+  transform: none;
+}
+
+.entry-link:hover .entry-arrow.is-persistent .bi {
+  transform: translate(2px, -2px);
+}
+
+@media only screen and (max-width: 767px) {
+  .content .entry-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  // the year sits above the box, as a heading for the boxes of that year:
+  // lifted out of the row, which reserves the space for it. The box and its
+  // hover frame then cover the row's content only.
+  // (.content .entry-row: beats the desktop rule for the year cell)
+  .content .entry-row .entry-year {
+    position: absolute;
+    top: -$mobile-year-space;
+    left: .1rem;
+    margin: 0;
+    align-self: start;
+  }
+
+  // the room for the year is padding on the entry: a margin on the row would
+  // collapse with the entry's own margin, leaving no white above the year
+  [data-group-years] .entry:not(.year-repeat) {
+    padding-top: $mobile-year-space;
+  }
+
+  [data-group-years] > .entry:not(.year-repeat):not(:first-child) {
+    margin-top: $mobile-year-gap;
+  }
+
+  .entry.year-repeat .entry-year {
+    display: none;
+  }
+
+  // no year column on phones, so no timeline
+  [data-group-years] .entry-year {
+    text-align: left;
+  }
+
+  [data-group-years] .entry .entry-year::before,
+  [data-group-years] .entry .entry-year::after {
+    display: none;
+  }
+
+  .entry-arrow {
+    display: none;
+  }
+
+  // the labelled hint is the only link indicator on phones, so keep it
+  .entry-arrow.is-persistent {
+    display: block;
+    margin-top: .4rem;
+  }
+}
+
+/*listing controls: order by, filter and pagination*/
+// Styled like buttons: plain text at rest, the grey fill and the small
+// offset frame on hover / while in use, and on the current page number.
+.quarto-listing .listing-actions-group {
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: .75rem;
+}
+
+.quarto-listing .quarto-listing-sort,
+.quarto-listing .quarto-listing-filter {
+  @include frame-base(1px, $button-radius - 1px);
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 0;
+  padding: .15rem .7rem;
+  border-radius: $button-radius;
+  background-color: $button-fill;
+
+  &:hover,
+  &:focus-within {
+    @include frame-on($button-offset);
+  }
+}
+
+.quarto-listing .input-group-text {
+  padding: 0 .4rem 0 0;
+  font-size: $fs-small;
+  color: $grey;
+  background: transparent;
+  border: 0;
+}
+
+.quarto-listing .quarto-listing-sort .form-select,
+.quarto-listing .quarto-listing-filter .form-control {
+  @include ui($fs-small, $fw-regular);
+  padding: .3rem 1.6rem .3rem 0;
+  color: $body-color;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.quarto-listing .quarto-listing-filter .form-control {
+  padding-right: 0;
+}
+
+.quarto-listing .form-select {
+  background-position: right .1rem center;
+  cursor: pointer;
+}
+
+.quarto-listing .form-control::placeholder {
+  color: $grey;
+  opacity: 1;
+}
+
+.quarto-listing .pagination {
+  gap: .35rem;
+  margin: 0;
+}
+
+.quarto-listing .pagination .page-link,
+.quarto-listing .pagination .page-item.active .page-link,
+.quarto-listing .pagination .page-item.disabled .page-link {
+  @include frame-base(1px, $button-radius - 1px);
+  @include ui($fs-small, $fw-regular);
+  min-width: 2.2rem;
+  padding: .3rem .6rem;
+  text-align: center;
+  color: $grey;
+  background-color: $button-fill;
+  background-image: none;
+  border: 0;
+  border-radius: $button-radius;
+  box-shadow: none;
+  text-decoration: none !important;
+  transition: color .2s, font-weight .3s $frame-ease;
+}
+
+.quarto-listing .pagination .page-link:hover,
+.quarto-listing .pagination .page-link:focus-visible,
+.quarto-listing .pagination .page-item.active .page-link {
+  @include frame-on($button-offset);
+  color: $body-color;
+  font-weight: $fw-strong;
+  background-color: $button-fill;
+}
+
+.quarto-listing .pagination .page-item.disabled .page-link {
+  opacity: .6;
+}
+
+// A section (heading with {.listing-section}) holding a listing followed by a
+// .listing-more button: the button shares a row with the page numbers.
+// display: contents only changes layout, List.js still finds its elements.
+.listing-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-auto-flow: row dense;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.listing-section > *,
+.listing-section > .quarto-listing > * {
+  grid-column: 1 / -1;
+}
+
+.listing-section > .quarto-listing {
+  display: contents;
+}
+
+.listing-section > .quarto-listing > .listing-pagination {
+  grid-column: 2;
+  padding-top: 0;
+}
+
+// on phones the button and the page numbers don't fit side by side
+// grid items don't collapse margins: space the list itself, so the button
+// and the page numbers centre on the same line below it
+.listing-section > .quarto-listing > .entry-list {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// the button lines up with the boxes above
+.listing-section > .listing-more {
+  grid-column: 1;
+}
+
+.listing-more {
+  margin-top: 1rem;
+}
+
+.listing-section > .listing-more {
+  margin-top: 0;
+}
+
+// on phones the button and the page numbers don't fit side by side: the page
+// numbers go on their own line, with the button below them
+@media only screen and (max-width: 767px) {
+  .listing-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .listing-section > .quarto-listing > .listing-pagination {
+    grid-column: 1;
+    justify-self: end;
+    margin-top: .75rem;
+  }
+
+  .listing-section > .listing-more {
+    margin-top: 1rem;
+  }
+}
+
+// drop the paragraph margin around the button and Quarto's padding above the
+// page numbers, so both boxes are exactly as tall as their content
+.listing-more > p {
+  margin: 0;
+}
+
+.listing-section .listing-pagination .pagination {
+  padding-top: 0;
+}
+
+.listing-no-matching {
+  @include ui($fs-small, $fw-light);
+  font-style: italic;
+  padding: 1.1rem 1.25rem;
+  color: $grey;
+}
+
+/*buttons: hero-heading links, resource links and other .site-button links*/
+// A grey box, always visible (so its edge lines up with the text around it);
+// on hover the small offset frame draws in, like on a listing row.
+@mixin site-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: $body-color !important;
+  text-decoration: none !important;
+  background-color: $button-fill;
+  background-image: none;
+  border: 0 !important;
+  border-radius: $button-radius;
+  padding: .45rem $button-pad-x;
+  @include ui($fs-small);
+  line-height: 1.5;
+  white-space: nowrap;
+  @include offset-frame($button-offset, 1px, $button-radius - 1px);
+
+  &:hover,
+  &:focus-visible {
+    color: $body-color !important;
+    background-color: $button-fill;
+    animation: none;
+  }
+}
+
+.about-links a.about-link,
+.content a.site-button,
+.content summary.site-button {
+  @include site-button;
+}
+
+// hero buttons: a little more room between text and frame (the page-level
+// selector is needed to beat Quarto's own about-page button styles)
+div.quarto-about-solana .about-entity .about-links a.about-link {
+  justify-content: center;
+  padding: .55rem $hero-button-pad-x;
+  font-size: $fs-small;
+}
+
+// on small screens Quarto stacks the hero buttons full width; as plain text
+// links they read better wrapped in centred rows
+@media (max-width: 991.98px) {
+  div.quarto-about-solana .about-entity .about-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem;
+  }
+
+  div.quarto-about-solana .about-entity .about-links a.about-link {
+    width: auto;
+  }
+}
+
+/*resources*/
+.resource-list {
+  margin-top: 1.5rem;
+}
+
+// each resource is a grey box; its buttons use the page colour to stand out
+.resource {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 2.5rem;
+  padding: 1.75rem 2rem 1.75rem 1.25rem;
+  border-radius: $listing-radius;
+  background-color: $entry-fill;
+  align-items: start;
+}
+
+.resource:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.content .resource a.site-button {
+  background-color: $body-bg;
+}
+
+// sized like the previous framed panel: images sit centred in the column
+.resource-image {
+  display: flex;
+  justify-content: center;
+  padding-top: .5rem;
+}
+
+.resource-image img {
+  display: block;
+  max-width: 155px;
+  max-height: 155px;
+  object-fit: contain;
+}
+
+.resource-title {
+  font-size: $fs-title-lg;
+  font-weight: $fw-strong + 100;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.resource-subtitle {
+  font-size: $fs-body;
+  font-weight: $fw-regular;
+  font-style: italic;
+  margin-top: .25rem;
+}
+
+.resource-description {
+  margin-top: 1rem;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .resource {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .resource-image {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .resource-image img {
+    max-width: 125px;
+    max-height: 125px;
+  }
+}
+
+/*footer: small, light text*/
+.nav-footer {
+  @include ui($fs-small, $fw-light);
+}
+
+/*conference presentations (research page): one grey box per conference*/
+.conference {
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: $listing-radius;
+  background-color: $entry-fill;
+}
+
+h2 + .conference,
+.conference:first-of-type {
+  margin-top: 1rem;
+}
+
+.conference h3 {
+  font-size: $fs-title-lg;
+  font-weight: $fw-strong;
+  margin: .1rem 0 .75rem;
+}
+
+.conference > p {
+  margin-bottom: 1rem;
+}
+
+// awards: a short list with an award icon
+.conference-awards ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.conference-awards li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-size: $fs-small;
+  margin-bottom: .35rem;
+}
+
+.conference-awards li::before {
+  content: "\F154"; // bootstrap-icons "award"
+  font-family: bootstrap-icons;
+  position: absolute;
+  left: 0;
+  top: .05rem;
+  color: $yellow;
+  font-size: .95rem;
+}
+
+.conference-awards em {
+  font-style: normal;
+  font-weight: $fw-strong;
+}
+
+// the toggle is a normal button (a <summary>); its list opens below it
+.conference-refs {
+  margin-top: .25rem;
+}
+
+.content summary.site-button {
+  cursor: pointer;
+  list-style: none;
+  background-color: $body-bg;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  .bi {
+    display: inline-block;
+    transition: transform .3s $frame-ease;
+  }
+}
+
+.conference-refs[open] > summary .bi {
+  transform: rotate(180deg);
+}
+
+.conference-refs .when-open,
+.conference-refs[open] .when-closed {
+  display: none;
+}
+
+.conference-refs[open] .when-open {
+  display: inline;
+}
+
+.conference-refs .references {
+  margin-top: 1rem;
+  font-size: $fs-small;
+}
+
+.conference-refs .csl-entry {
+  margin-bottom: .6rem;
+}

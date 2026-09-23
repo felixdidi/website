@@ -5,14 +5,15 @@ date: ""
 listing:
   id: teaching
   contents: teaching.yml
-  type: grid
-  # categories: unnumbered
-  grid-columns: 2
-  grid-item-border: false
+  type: custom
+  template: ../_listings/teaching.ejs
 about:
   id: hero-heading
   template: solana
   links:
+    - icon: envelope
+      text: Contact
+      href: https://medienpsychologie.ifp.uni-mainz.de/felix-dietrich/
     - icon: github
       text: GitHub
       href: https://github.com/felixdidi
@@ -21,6 +22,4 @@ about:
 ::: {#hero-heading}
 :::
 
-I teach classes at the [Johannes Gutenberg University Mainz](https://uni-mainz.de). In the past, I have also taught classes at the [University of Mannheim](https://uni-mannheim.de). In the interest of keeping my teaching materials accessible, the respective course websites are publicly available for modules with a yellow frame. More materials are hosted on my [GitHub](https://github.com/felixdidi) Page or on the [JGU's Moodle Platform](https://lms.uni-mainz.de).
-
-<br>
+In my teaching, I focus on the intersection of media psychology and computational methods. I aim to enable students in their ability to analyze and understand media content and its effects.

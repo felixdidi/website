@@ -1,0 +1,26 @@
+<%
+// Publication listings (home + research), using the shared entry-* styles.
+// Keeps the listing-* classes Quarto's sort/filter UI relies on.
+// Listing option `template-params: {show-year: false}` hides the year column.
+const authors = (item) => Array.isArray(item.author) ? item.author.join(", ") : (item.author || "");
+const params = typeof templateParams !== "undefined" && templateParams ? templateParams : {};
+const showYear = params["show-year"] !== false;
+%>
+```{=html}
+<div class="list entry-list<%- showYear ? "" : " no-year" %>"<%- showYear ? " data-group-years" : "" %>>
+<% for (const item of items) { %>
+<div class="entry" <%= metadataAttrs(item) %>>
+<a href="<%- item.path %>" class="entry-row entry-link no-external">
+<% if (showYear) { %><div class="entry-year listing-date"><%= item.date %></div><% } %>
+<div class="entry-body">
+<% if (item.description) { %><div class="entry-kicker listing-description"><%= item.description %></div><% } %>
+<h3 class="no-anchor entry-title listing-title"><%= item.title %></h3>
+<% if (item.subtitle) { %><div class="entry-subtitle listing-subtitle"><%= item.subtitle %></div><% } %>
+<% if (item.author) { %><div class="entry-meta listing-author"><%- authors(item) %></div><% } %>
+</div>
+<div class="entry-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></div>
+</a>
+</div>
+<% } %>
+</div>
+```

@@ -1,0 +1,31 @@
+---
+title: Resources
+author: ""
+date: ""
+format:
+  html:
+    toc: false
+listing:
+  id: resources
+  contents: resources.yml
+  type: custom
+  template: ../_listings/resources.ejs
+  sort: false
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai osf >}} OSF"
+      href: https://osf.io/uec7n
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi
+---
+
+::: {#hero-heading}
+:::
+
+Alongside my research, I develop open source tools and resources that make methods from my work easier to use for others. Source code for all projects is available on [GitHub](https://github.com/felixdidi).
+
+::: {#resources}
+:::

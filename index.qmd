@@ -9,13 +9,17 @@ format:
     toc: false
 listing:
   id: pubs
-  page-size: 3
+  page-size: 2
   contents: 
     - "publications/*_pub.qmd"
   fields: [title, subtitle, date, author, description]
-  type: default
-  sort-ui: true
-  filter-ui: true
+  type: custom
+  template: _listings/publications.ejs
+  template-params:
+    show-year: false
+  date-format: "YYYY"
+  sort-ui: false
+  filter-ui: false
   sort: 
     - "date desc"
     - title
@@ -70,7 +74,11 @@ I'm a PhD student and research associate at the working group <a target="_blank"
 
 <br>
 
-## Recent Publications
+## Recent Publications {.listing-section}
 
 ::: {#pubs}
+:::
+
+::: {.listing-more}
+[All publications <i class="bi bi-arrow-right"></i>](research/index.qmd){.site-button}
 :::

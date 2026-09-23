@@ -1,0 +1,45 @@
+- title: "mlstats"
+  type: "R package"
+  subtitle: "Multilevel descriptive statistics and data preparation"
+  image: img/mlstats.png
+  image-alt: "mlstats hex sticker"
+  description: |
+    mlstats is an R package for multilevel descriptive statistics and data preparation. It computes within-group and between-group correlations, intraclass correlation coefficients (ICCs), and descriptive statistics for nested data, such as repeated measurements nested in persons, using either frequentist or Bayesian estimation.
+
+    Results are formatted according to APA standards and can be exported as publication-ready tables. The package also provides helpers to decompose variables into their within-group and between-group components for Random Effects Within-Between (REWB) models.
+  links:
+    - icon: globe
+      text: Website
+      href: https://felixdidi.github.io/mlstats/
+    - icon: rocket-takeoff
+      text: Get started
+      href: https://felixdidi.github.io/mlstats/articles/mlstats.html
+    - icon: box-seam
+      text: CRAN
+      href: https://cloud.r-project.org/package=mlstats
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi/mlstats/
+
+- title: "Open Source LLMs for Content Analysis"
+  type: "Tutorial website"
+  subtitle: "Step-by-step guides to content analysis with open source LLMs"
+  image: img/llm-content-analysis.png
+  image-alt: "Illustration of a transformer-style robot working on a laptop"
+  description: |
+    Together with colleagues, I created [llm-content-analysis.com](https://llm-content-analysis.com), a tutorial website on using ready-to-use, open source Large Language Models (LLMs) from Hugging Face for the standardized content analysis of texts. It is intended as a resource for researchers and practitioners in the social sciences and related fields, and requires no prior experience with LLMs.
+
+    The step-by-step tutorials walk through common tasks with three types of models: category-specific encoder models, task-specific encoder models, and universal decoder models. The site also serves as the companion website to our paper in *Publizistik* (in German), including a schematic guide and an empirical example study, and hosts the materials of a hands-on workshop.
+  links:
+    - icon: globe
+      text: Website
+      href: https://llm-content-analysis.com
+    - icon: people
+      text: Workshop
+      href: https://llm-content-analysis.com/sections/workshop/
+    - icon: file-earmark-text
+      text: Paper
+      href: https://doi.org/10.1007/s11616-026-00942-w
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi/llm-content-analysis

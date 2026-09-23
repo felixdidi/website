@@ -18,6 +18,8 @@ $green:   #b8bb26 !default;
 $teal:    #8ec07c !default;
 $grey:    #928374 !default;
 $font-family-sans-serif: "Aleo", sans-serif !default;
+// Aleo is self-hosted (components.scss); don't load Cosmo's Google web font
+$web-font-path: false !default;
 
 /*only darkmode*/
 h1 {
@@ -26,7 +28,6 @@ h1 {
 
 /*-- scss:rules --*/
 
-@import url(https://fonts.bunny.net/css?family=aleo:400,400i,700,700i,900,900i);
 
 body {
   transition: 0.3s;
@@ -52,23 +53,12 @@ p, .abstract {
 }
 
 /*style hyperlinks*/
+/* underline and hover animation: see components.scss */
 .content a {
   color: $body-color;
-  text-decoration: underline !important;
-  text-decoration-color: $yellow !important;
-  text-decoration-thickness: 2px;
-}
-.content a:hover {
-  color: $body-color !important;
-  text-decoration-style: wavy !important;
 }
 #title-block-header a {
   color: $body-color !important;
-}
-.about-links a {
-  text-decoration: none !important;
-  color: $body-color !important;
-  border-color: $grey !important;
 }
 .quarto-listing a {
   text-decoration: none !important;
@@ -93,17 +83,10 @@ p, .abstract {
 
 .navbar-nav .nav-link.active {
   color: $navbar-fg;
-  text-decoration: underline !important;
-  text-decoration-color: $yellow !important;
-  text-decoration-thickness: 2px;
 }
 
 .navbar-nav a:hover {
   color: $navbar-fg !important;
-  text-decoration: underline !important;
-  text-decoration-color: $yellow !important;
-  text-decoration-thickness: 2px;
-  text-decoration-style: wavy !important;
 }
 
 /*hide unwanted output*/
@@ -115,53 +98,6 @@ p, .abstract {
 .gt_table {
   font-family: inherit !important;
   font-size: 0.9rem !important;
-}
-
-.card-title {
-  font-weight: 900;
-  font-size: 1.1rem;
-  margin-bottom: .2rem;
-}
-
-.card-subtitle {
-  font-size: .8rem;
-  font-style: italic;
-  padding-bottom: 10px;
-}
-
-.quarto-listing-cols-2 > div:has(a.quarto-grid-link[href]:not([href="https://felix-dietrich.de/teaching/"])) {
-  border: 2px solid $yellow;
-  border-radius: 5px;
-}
-
-.listing-category {
-  color: $grey !important;
-  border: none !important;
-}
-
-/*style filter and order tools*/
-.form-control, .form-select, .input-group-text {
-  border-color: $grey;
-}
-
-.input-group-text {
-  color: $body-color;
-  background-color: $body-bg;
-}
-
-/*style pagination for listing*/
-.page-link:hover {
-  background: $yellow;
-  color: $body-bg;
-}
-
-/*style listing*/
-.quarto-post {
-  border-color: $grey !important;
-}
-
-.listing-title a {
-  font-weight: 600;
 }
 
 /*style selections*/

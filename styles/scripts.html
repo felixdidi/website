@@ -1,0 +1,40 @@
+<script>
+// Site-wide scripts (included on every page via _quarto.yml).
+
+// Listings marked with data-group-years (see _listings/) show the year only
+// on the first entry of each year, and draw a timeline through the entries
+// of the same year. Re-applied after every List.js update, so it follows
+// whatever sort / filter / page is currently visible.
+//   year-repeat:    same year as the entry before (year label hidden)
+//   year-continues: same year as the entry after (timeline runs on)
+window.addEventListener("DOMContentLoaded", () => {
+  const groupYears = (container) => {
+    const entries = [...container.querySelectorAll(":scope > .entry")];
+    const years = entries.map((entry) =>
+      entry.querySelector(".entry-year")?.textContent.trim());
+    entries.forEach((entry, i) => {
+      const year = years[i];
+      entry.classList.toggle("year-repeat", !!year && year === years[i - 1]);
+      entry.classList.toggle("year-continues", !!year && year === years[i + 1]);
+    });
+  };
+  for (const list of Object.values(window["quarto-listings"] || {})) {
+    const container = list.list;
+    if (!container || !container.hasAttribute("data-group-years")) continue;
+    list.on("updated", () => groupYears(container));
+    groupYears(container);
+  }
+});
+
+// Conference presentations (research page): "Show 13 presentations", counted
+// from the rendered list (without JS the button just says "Show presentations").
+window.addEventListener("DOMContentLoaded", () => {
+  for (const details of document.querySelectorAll("details.conference-refs")) {
+    const count = details.querySelectorAll(".csl-entry").length;
+    const label = details.querySelector(".conference-count");
+    if (label && count) {
+      label.textContent = `${count} presentation${count === 1 ? "" : "s"}`;
+    }
+  }
+});
+</script>

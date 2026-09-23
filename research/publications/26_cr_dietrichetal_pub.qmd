@@ -18,8 +18,8 @@ about:
   links:
     - text: "{{< ai closed-access >}} PDF"
       href: https://doi.org/10.1177/00936502261468400
-    # - text: "{{< ai open-access >}} Postprint (Open Access)"
-    #   href: 
+    - text: "{{< ai open-access >}} Postprint (Open Access)"
+      href: https://osf.io/preprints/psyarxiv/g5njb_v1
     - text: "{{< ai preregistered >}} Preregistration"
       href: https://osf.io/w6eg4
     - text: "{{< ai open-data >}} Data"
