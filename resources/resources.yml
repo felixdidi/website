@@ -11,6 +11,9 @@
     - icon: globe
       text: Website
       href: https://felixdidi.github.io/mlstats/
+    - icon: file-earmark-text
+      text: Paper
+      href: ../research/publications/26_mmc_dietrich_pub.html
     - icon: rocket-takeoff
       text: Get started
       href: https://felixdidi.github.io/mlstats/articles/mlstats.html
@@ -34,12 +37,12 @@
     - icon: globe
       text: Website
       href: https://llm-content-analysis.com
+    - icon: file-earmark-text
+      text: Paper
+      href: ../research/publications/26_publizistik_possleretal_pub.html
     - icon: people
       text: Workshop
       href: https://llm-content-analysis.com/sections/workshop/
-    - icon: file-earmark-text
-      text: Paper
-      href: https://doi.org/10.1007/s11616-026-00942-w
     - icon: github
       text: GitHub
       href: https://github.com/felixdidi/llm-content-analysis

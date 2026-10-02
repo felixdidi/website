@@ -1,0 +1,33 @@
+---
+title: "mlstats"
+subtitle: "An R package for multilevel descriptive statistics and data preparation"
+description: "Mobile Media & Communication"
+author:
+  - Felix Dietrich
+date: 2026-09-25
+csl: https://www.zotero.org/styles/apa
+bibliography: "../../bib/pubs-articles.bib"
+nocite: "@dietrichMlstatsPackageMultilevel2026"
+about:
+  id: hero-heading
+  template: solana
+  links:
+    - text: "{{< ai closed-access >}} PDF"
+      href: https://doi.org/10.1177/20501579261491585
+    # - text: "{{< ai open-access >}} Postprint (Open Access)"
+    #   href: https://osf.io/preprints/psyarxiv/XXXXX
+    - icon: globe
+      text: Package Website
+      href: https://felixdidi.github.io/mlstats/
+    - icon: box-seam
+      text: CRAN
+      href: https://cloud.r-project.org/package=mlstats
+    - icon: github
+      text: GitHub
+      href: https://github.com/felixdidi/mlstats/
+---
+
+::: {#hero-heading}
+:::
+
+Mobile research methods such as experience sampling, smartphone logging, and daily diary designs produce nested data, in which within-level fluctuations must be distinguished from between-level differences. Yet, there is no established convention for preparing and descriptively reporting such multilevel data. This paper introduces mlstats, an open-source R package that computes multilevel descriptive statistics—including intraclass correlation coefficients and within- and between-group correlations—in a single call, exports publication-ready tables, and decomposes variables for random effects within-between modeling. Supporting both frequentist and Bayesian estimation, mlstats is freely available on Comprehensive R Archive Network with extensive online documentation at <https://felixdidi.github.io/mlstats/>.
