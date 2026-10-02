@@ -7,16 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Felix Dietrich">
-<meta name="author" content="Alicia Ernst">
-<meta name="author" content="Rebekka Kreling">
-<meta name="author" content="Alicia Gilbert">
-<meta name="author" content="Benedikt Rohr">
-<meta name="author" content="Michael Scharkow">
-<meta name="author" content="Leonard Reinecke">
-<meta name="dcterms.date" content="2025-09-23">
-<meta name="description" content="Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Mobile Media &amp; Communication">
 
-<title>The differential effects of algorithmic recommendations on user experience – Felix Dietrich</title>
+<title>mlstats – Felix Dietrich</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -341,50 +335,43 @@ div.csl-indent {
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The differential effects of algorithmic recommendations on user experience</h1>
-<p class="subtitle lead">Enjoyment and serendipity in everyday music streaming</p>
+<h1 class="title">mlstats</h1>
+<p class="subtitle lead">An R package for multilevel descriptive statistics and data preparation</p>
 </div>
 <div>
   <div class="description">
-    Proceedings of the 3rd International Conference of the ACM Greek SIGCHI Chapter
+    Mobile Media &amp; Communication
   </div>
 </div>
 <div class="quarto-title-meta">
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
              <p>Felix Dietrich </p>
-             <p>Alicia Ernst </p>
-             <p>Rebekka Kreling </p>
-             <p>Alicia Gilbert </p>
-             <p>Benedikt Rohr </p>
-             <p>Michael Scharkow </p>
-             <p>Leonard Reinecke </p>
           </div>
   </div>
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 23, 2025</p>
+      <p class="date">September 25, 2026</p>
     </div>
   </div>
   </div>
 </header> <div class="about-links">
-  <a href="https://dl.acm.org/doi/pdf/10.1145/3749012.3749040" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-open-access"></i> PDF (Open Access)</span>
+  <a href="https://doi.org/10.1177/20501579261491585" class="about-link" rel="" target="">
+     <span class="about-link-text"><i class="ai  ai-closed-access"></i> PDF</span>
   </a>
-  <a href="https://osf.io/j9yb3/" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-preregistered"></i> Preregistration</span>
+  <a href="https://felixdidi.github.io/mlstats/" class="about-link" rel="" target="">
+    <i class="bi bi-globe"></i>
+     <span class="about-link-text">Package Website</span>
   </a>
-  <a href="https://osf.io/9bywg/" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-open-data"></i> Data</span>
+  <a href="https://cloud.r-project.org/package=mlstats" class="about-link" rel="" target="">
+    <i class="bi bi-box-seam"></i>
+     <span class="about-link-text">CRAN</span>
   </a>
-  <a href="https://osf.io/9bywg/" class="about-link" rel="" target="">
-    <i class="bi bi-code"></i>
-     <span class="about-link-text">Code</span>
-  </a>
-  <a href="https://osf.io/9bywg/" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-open-materials"></i> Materials</span>
+  <a href="https://github.com/felixdidi/mlstats/" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">GitHub</span>
   </a>
 </div>
       <div class="about-contents"><div id="hero-heading">
@@ -393,15 +380,15 @@ div.csl-indent {
   </div>
 </div>
 
-<p>The rise of music streaming services such as Spotify has transformed music listening behavior. Most prominently, online recommender systems foster highly individualized exposure to content and substantially shape user experience (UX). Yet, no research so far has investigated whether good or bad UX in the context of algorithmically curated music listening may be attributed to the actual functions of the algorithm (i.e., prevalence of personalized suggestions), users’ perceptions of the algorithm (i.e., interface transparency; individual perception and general algorithmic awareness), or both. In the present study, we attempt to separate these components of algorithmic curation by exploring their differential effects on users’ experience of enjoyment and serendipity. We employed a linkage design within which we combined data collected through the experience sampling method with digital trace data about the listening behavior of participants collected through the Spotify API. We recruited 144 participants, resulting in <em>T</em> = 6,920 situational measurement occasions, of which 40% (<em>t</em> = 2,786) were preceded by a Spotify listening session. We find that sessions characterized by more algorithmic curation were enjoyed less. This finding emerged both for the objectively measured prevalence of algorithmic curation (with and without interface cues signaling the presence of algorithmic curation) and for users’ subjective perception of algorithmic curation. Furthermore, sessions with a higher prevalence of algorithmic curation were perceived as more novel and unexpected. This novelty, however, was evaluated more positively only by users with a high awareness for automated decision-making in situations in which Spotify’s interface provided them with cues about the algorithm’s presence. These findings indicate that algorithmic recommendations may not always contribute to better UX but can be beneficial in specific use cases such as content discovery, yet only if users are aware that they are interacting with an algorithm and these interactions are in line with their goals.</p>
+<p>Mobile research methods such as experience sampling, smartphone logging, and daily diary designs produce nested data, in which within-level fluctuations must be distinguished from between-level differences. Yet, there is no established convention for preparing and descriptively reporting such multilevel data. This paper introduces mlstats, an open-source R package that computes multilevel descriptive statistics—including intraclass correlation coefficients and within- and between-group correlations—in a single call, exports publication-ready tables, and decomposes variables for random effects within-between modeling. Supporting both frequentist and Bayesian estimation, mlstats is freely available on Comprehensive R Archive Network with extensive online documentation at <a href="https://felixdidi.github.io/mlstats/" class="uri">https://felixdidi.github.io/mlstats/</a>.</p>
 
 
 
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-dietrichDifferentialEffectsAlgorithmic2025" class="csl-entry" role="listitem">
-Dietrich, F., Ernst, A., Kreling, R., Gilbert, A., Rohr, B., Scharkow, M., &amp; Reinecke, L. (2025). The differential effects of algorithmic recommendations on user experience: <span>Enjoyment</span> and serendipity in everyday music streaming. <em>Proceedings of the 3rd <span>International Conference</span> of the <span>ACM Greek SIGCHI Chapter</span>, <span>CHIGreece</span> ’25</em>, 8–16. <a href="https://doi.org/10/g954hw">https://doi.org/10/g954hw</a>
+<div id="ref-dietrichMlstatsPackageMultilevel2026" class="csl-entry" role="listitem">
+Dietrich, F. (2026). <span><em>Mlstats</em></span> : An <span>R</span> package for multilevel descriptive statistics and data preparation. <em>Mobile Media &amp; Communication</em>, 20501579261491585. <a href="https://doi.org/10.1177/20501579261491585">https://doi.org/10.1177/20501579261491585</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script>

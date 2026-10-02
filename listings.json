@@ -1,11 +1,8 @@
 [
   {
-    "listing": "/teaching/index.html",
-    "items": []
-  },
-  {
     "listing": "/research/index.html",
     "items": [
+      "/research/publications/26_mmc_dietrich_pub.html",
       "/research/publications/26_publizistik_possleretal_pub.html",
       "/research/publications/26_cr_dietrichetal_pub.html",
       "/research/publications/26_hcr_ernstetal_pub.html",
@@ -19,8 +16,13 @@
     ]
   },
   {
+    "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/research/publications/26_mmc_dietrich_pub.html",
       "/research/publications/26_publizistik_possleretal_pub.html",
       "/research/publications/26_cr_dietrichetal_pub.html",
       "/research/publications/26_hcr_ernstetal_pub.html",
