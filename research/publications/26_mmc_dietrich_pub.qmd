@@ -14,8 +14,8 @@ about:
   links:
     - text: "{{< ai closed-access >}} PDF"
       href: https://doi.org/10.1177/20501579261491585
-    # - text: "{{< ai open-access >}} Postprint (Open Access)"
-    #   href: https://osf.io/preprints/psyarxiv/XXXXX
+    - text: "{{< ai open-access >}} Postprint (Open Access)"
+      href: https://osf.io/preprints/psyarxiv/hdz5e_v1
     - icon: globe
       text: Package Website
       href: https://felixdidi.github.io/mlstats/
