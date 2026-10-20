@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/research/index.html",
+    "listing": "/index.html",
     "items": [
       "/research/publications/26_mmc_dietrich_pub.html",
       "/research/publications/26_publizistik_possleretal_pub.html",
@@ -20,7 +20,7 @@
     "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/research/index.html",
     "items": [
       "/research/publications/26_mmc_dietrich_pub.html",
       "/research/publications/26_publizistik_possleretal_pub.html",
