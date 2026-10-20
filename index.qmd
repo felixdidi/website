@@ -56,7 +56,7 @@ about:
 
 ::: {.g-col-md-6 .g-col-12}
 
-I'm a PhD student and research associate at the working group <a target="_blank" href="https://www.mediapsychology.ifp.uni-mainz.de">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz.
+I'm a PhD student and research associate at the working group <a target="_blank" href="https://medienpsychologie.ifp.uni-mainz.de/en/">Media Effects and Media Psychology</a>, Department of Communication, Johannes Gutenberg University Mainz.
 
 **My research interests include:**
 
